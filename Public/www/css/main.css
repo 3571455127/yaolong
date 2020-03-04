@@ -688,6 +688,14 @@ footer .copy {
     padding-top: 32px;
 }
 
+header .infos a {
+    color: #524F3F;
+}
+
+.index .contact .details .boxs-txt a {
+    color: #737277;
+}
+
 /* 响应式处理 */
 @media screen and (max-width:1920px) {
 
@@ -698,15 +706,96 @@ footer .copy {
 
 @media screen and (max-width:1366px) {
 
-    .index .list .content {
+    /* .index .list .content {
         min-height: 380px;
+    } */
+
+    header .nav {
+        height: 130px;
     }
-}
 
-header .infos a {
-    color: #524F3F;
-}
+    header .nav .logo {
+        padding: 26px 0;
+    }
 
-.index .contact .details .boxs-txt a {
-    color: #737277;
+    header .nav .list li a {
+        line-height: 130px;
+    }
+
+    .index .odds h3,
+    .index .product h3,
+    .index .news h3,
+    .index .about h3,
+    .index .contact h3 {
+        font-size: 24px;
+    }
+
+    .index .odds img {
+        width: 30%;
+    }
+
+    .index .odds .box .list .box-img {
+        min-height: 100px;
+    }
+
+    .index .odds .box .list .ico {
+        padding-bottom: 0;
+        min-height: 200px;
+    }
+
+    .index .odds .box .list {
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+
+    .index .product .list .imgs,
+    .index .product .list .txt {
+        height: 450px;
+    }
+
+    .index .product .list .txt .box {
+        top: 70%;
+    }
+
+    .index .product .list .txt .title,
+    .index .contact .list .title {
+        font-size: 18px;
+    }
+
+    .index .list .content,
+    .index .contact .details .boxs-txt {
+        font-size: 16px;
+    }
+
+    .index .contact .list .box .box-img {
+        height: 360px;
+    }
+
+    .index .contact {
+        padding-bottom: 0;
+    }
+
+    .index .contact .details .boxs .boxs-img img {
+        width: 60%;
+    }
+
+    .index .contact .details .boxs:nth-child(3) img {
+        width: 40%;
+    }
+
+    .index .contact form .box {
+        padding-bottom: 20px;
+    }
+
+    .index .contact form .submit-btn {
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        margin-left: 435px;
+    }
+
+    footer .copy {
+        font-size: 20px;
+    }
 }

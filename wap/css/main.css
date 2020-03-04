@@ -265,6 +265,15 @@ header .top-bar span {
     color: red;
 }
 
+.index .contact .form-box .box {
+    width: 50%;
+    float: left;
+    margin-right: 2%;
+}
+
+
+
+
 /* footer */
 footer .info img {
     max-width: 100%;
