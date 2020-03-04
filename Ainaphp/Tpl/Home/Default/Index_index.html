@@ -1,0 +1,96 @@
+
+
+    <div class="index">
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n">
+                <div class="swiper-slide"><a href="{$r.link}"  title="{$r.title}"><img src="{$r.pic}" alt="{$r.title}"></a></div>
+                </YP:list>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- odds -->
+        <div class="odds">
+            <a name="odds"></a>
+            <?php getcatvar('page','id = 77','cont');?>
+        </div>
+
+        <!-- product -->
+        <div class="product">
+            <a name="product"></a>
+            <?php getcatvar('page','id = 73','cont');?>
+        </div>
+
+        <!-- news -->
+        <div class="news">
+            <a name="news"></a>
+            <?php getcatvar('page','id = 108','cont');?>
+        </div>
+
+
+        <!-- about -->
+        <div class="about">
+            <a name="about"></a>
+            <?php getcatvar('page','id = 74','cont');?>
+        </div>
+
+        <!-- contact -->
+        <div class="contact">
+            <a name="contact"></a>
+            <h3>contact us</h3>
+            <div class="lines"></div>
+            <div class="container">
+                <div class="row">
+
+                    <div class="list">
+                        <div class="title"> Select Product <span> * </span> </div>
+                        <div class="box clearfix">
+                            <?php getcatvar('page','id = 78','cont');?>
+                        </div>
+                    </div>
+
+                    <div class="form-box clearfix">
+
+                        <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
+                            action="index.php?g=Home&a=message">
+                            <div class="clearfix" style="padding-bottom:20px">
+<input name="forward" type="hidden" value="{$_SERVER['SERVER_NAME']}{if $catid}/index.php?m={$Categorys[$catid]['module']}&a=index&id={$catid}{else}/index.php{/if}"/>
+                                <div class="box clearfix">
+                                    <div class="box-left col-lg-4 col-md-4">
+                                        <p>Name <span> *</span></p>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8"> <input type="text" name="name"></div>
+                                </div>
+                                <div class="box clearfix">
+                                    <div class="box-left col-lg-4 col-md-4">
+                                        <p>Email <span>*</span></p>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8"> <input type="text" name="email"></div>
+                                </div>
+                                <div class="box clearfix">
+                                    <div class="box-left col-lg-4 col-md-4">
+                                        <p>Company name <span>*</span></p>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8"> <input type="text" name="com"></div>
+                                </div>
+                                <div class="box clearfix">
+                                    <div class="box-left col-lg-4 col-md-4">
+                                        <p>Amount </p>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8"> <input type="text" name="Amount"></div>
+                                </div>
+                                <div class="box clearfix">
+                                    <div class="box-left col-lg-4 col-md-4">
+                                        <p> Message</p>
+                                    </div>
+                                    <div class="col-lg-8 col-md-8"> <textarea name="message"></textarea></div>
+                                </div>
+                            </div>
+                            <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
+                        </form>
+
+                        

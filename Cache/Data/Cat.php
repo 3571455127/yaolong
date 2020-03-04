@@ -1,0 +1,1 @@
+<?php	return array ( 'chooseyaolong' => '77', 'PRODUCTS' => '73', 'AboutYaolongBollard' => '108', 'about' => '74', 'contact' => '78', 'thanks' => '103', );?>
