@@ -53,17 +53,9 @@ function beforeSubmit2(form) {
         alert('The email is wrong');
         form.email.focus();
         return false;
-    } else if (form.phone.value == '') {
-        alert('The cellphone can not be empty');
-        form.phone.focus();
-        return false;
-    } else if (form.cellphone.value.length < 11) {
-        alert('The phone is wrong');
-        form.phone.focus();
-        return false;
-    } else if (form.counntry.value == '') {
-        alert('The counntry can not be empty');
-        form.counntry.focus();
+    } else if (form.company.value == '') {
+        alert('The company can not be empty');
+        form.company.focus();
         return false;
     } else {
 

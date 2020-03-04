@@ -702,3 +702,11 @@ footer .copy {
         min-height: 380px;
     }
 }
+
+header .infos a {
+    color: #524F3F;
+}
+
+.index .contact .details .boxs-txt a {
+    color: #737277;
+}
