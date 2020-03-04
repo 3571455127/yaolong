@@ -49,7 +49,8 @@
                         </div>
                         <div class="email pull-left">
                             <img src="__PUBLIC__/www/images/email.png" alt="">
-                            <span>Email:<?php echo ($email); ?></span></div>
+                            <a href="" target="_blank"><span>Email:<?php echo ($email); ?></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,103 +77,98 @@
         </div>
 
     </header>
-
-
-    <div class="index">
-        <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide"><a href="<?php echo ($r["link"]); ?>"  title="<?php echo ($r["title"]); ?>"><img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>"></a></div><?php endforeach; endif;?>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+<div class="index">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide"><a href="<?php echo ($r["link"]); ?>" title="<?php echo ($r["title"]); ?>"><img src="<?php echo ($r["pic"]); ?>"
+                            alt="<?php echo ($r["title"]); ?>"></a></div><?php endforeach; endif;?>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
 
-        <!-- odds -->
-        <div class="odds">
-            <a name="odds"></a>
-            <?php getcatvar('page','id = 77','cont');?>
-        </div>
+    <!-- odds -->
+    <div class="odds">
+        <a name="odds"></a>
+        <?php getcatvar('page','id = 77','cont');?>
+    </div>
 
-        <!-- product -->
-        <div class="product">
-            <a name="product"></a>
-            <?php getcatvar('page','id = 73','cont');?>
-        </div>
+    <!-- product -->
+    <div class="product">
+        <a name="product"></a>
+        <?php getcatvar('page','id = 73','cont');?>
+    </div>
 
-        <!-- news -->
-        <div class="news">
-            <a name="news"></a>
-            <?php getcatvar('page','id = 108','cont');?>
-
-            
-            
-        </div>
+    <!-- news -->
+    <div class="news">
+        <a name="news"></a>
+        <?php getcatvar('page','id = 108','cont');?>
+    </div>
 
 
-        <!-- about -->
-        <div class="about">
-            <a name="about"></a>
-            <?php getcatvar('page','id = 74','cont');?>
-        </div>
+    <!-- about -->
+    <div class="about">
+        <a name="about"></a>
+        <?php getcatvar('page','id = 74','cont');?>
+    </div>
 
-        <!-- contact -->
-        <div class="contact">
-            <a name="contact"></a>
-            <h3>contact us</h3>
-            <div class="lines"></div>
-            <div class="container">
-                <div class="row">
+    <!-- contact -->
+    <div class="contact">
+        <a name="contact"></a>
+        <h3>contact us</h3>
+        <div class="lines"></div>
+        <div class="container">
+            <div class="row">
 
-                    <div class="list">
-                        <div class="title"> Select Product <span> * </span> </div>
-                        <div class="box clearfix">
-                            <?php getcatvar('page','id = 78','cont');?>
-                        </div>
+                <div class="list">
+                    <div class="title"> Select Product <span> * </span> </div>
+                    <div class="box clearfix">
+                        <?php getcatvar('page','id = 78','cont');?>
                     </div>
+                </div>
 
-                    <div class="form-box clearfix">
+                <div class="form-box clearfix">
 
-                        <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
-                            action="index.php?g=Home&a=message">
-                            <div class="clearfix" style="padding-bottom:20px">
-<input name="forward" type="hidden" value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>"/>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Name <span> *</span></p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="name"></div>
+                    <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
+                        action="index.php?g=Home&a=message">
+                        <div class="clearfix" style="padding-bottom:20px">
+                            <input name="forward" type="hidden"
+                                value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>" />
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Name <span> *</span></p>
                                 </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Email <span>*</span></p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="email"></div>
-                                </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Company name <span>*</span></p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="com"></div>
-                                </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Amount </p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="Amount"></div>
-                                </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p> Message</p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <textarea name="message"></textarea></div>
-                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="name"></div>
                             </div>
-                            <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
-                        </form>
-
-                        
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Email <span>*</span></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="email"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Company name <span>*</span></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="company"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Amount </p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="Amount"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p> Message</p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <textarea name="message"></textarea></div>
+                            </div>
+                        </div>
+                        <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
+                    </form>
 <div class="details col-lg-5 col-md-7">
                             <div class="boxs clearfix">
                                 <div class="boxs-img col-lg-2 col-md-2"><img src="/Public/www/images/ico-contact1.png" alt=""></div>
@@ -183,7 +179,7 @@
                             <div class="boxs clearfix">
                                 <div class="boxs-img col-lg-2 col-md-2"><img src="/Public/www/images/ico-contact2.png" alt=""></div>
                                 <div class="boxs-txt col-lg-10 col-md-10">
-                                    Email:<?php echo ($email); ?>
+                                    <a href="" target="_blank">Email:<?php echo ($email); ?></a>
                                 </div>
                             </div>
                             <div class="boxs clearfix">
