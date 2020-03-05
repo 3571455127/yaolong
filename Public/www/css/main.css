@@ -196,7 +196,7 @@ header .top-nav {
 
 header .top-nav .logo {
     position: relative;
-    padding: 40px 0;
+    padding: 15px 0;
 }
 
 header .top-nav .logo img {
@@ -212,7 +212,7 @@ header .top-nav .list li {
 header .top-nav .list li a {
     font-size: 22px;
     color: #706F74;
-    line-height: 178px;
+    line-height: 106px;
     padding: 20px;
     text-transform: uppercase;
 }
