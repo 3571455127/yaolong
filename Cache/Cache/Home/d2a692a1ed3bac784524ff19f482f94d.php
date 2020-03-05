@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="__PUBLIC__/www/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/swiper-4.5.0.min.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/animate.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/www/css/viewer.min.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/main.css">
 
     <!-- 字体引入 -->
@@ -30,19 +31,11 @@
             src: url('__PUBLIC__/www/font/Roboto.ttf');
         }
     </style>
-    <script type="text/javascript" src="__PUBLIC__/www/js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/www/js/zoom.js"></script>
-    <script>
-        $(function () {
-            /*
-             smallimg   // 小图
-             bigimg  //点击放大的图片
-             mask   //黑色遮罩
-             */
-            var obj = new zoom('mask', 'bigimg', 'smallimg');
-            obj.init();
-        })
-    </script>
+    <!-- <script type="text/javascript" src="__PUBLIC__/www/js/jquery-3.3.1.min.js"></script> -->
+    <script type="text/javascript" src="__PUBLIC__/www/js/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="__PUBLIC__/www/js/zoom.js"></script> -->
+    <script type="text/javascript" src="__PUBLIC__/www/js/viewer.min.js"></script>
+    
 </head>
 
 <body>
@@ -135,7 +128,12 @@
                 <div class="row">
                     <div class="top clearfix">
                         <div class="box-img col-lg-6 col-md-6">
-                            <img src="/Public/www/images/about1.png" alt="" />
+                            <div class="example">
+                                <div class="example-box">
+                                    <img src="/Public/www/images/about1.png" alt="" />
+                                </div>
+                            </div>
+
                         </div>
                         <div class="txt col-lg-6 col-md-6">
                             <div class="title">
@@ -163,25 +161,29 @@
                         <div class="box-img">
                             <img src="/Public/www/images/ico-about.png" alt="" />
                         </div>
-                        <div>
-                          
-                            <div class="imgs clearfix">
+
+
+                        <div class="example">
+                            <div class="example-box imgs clearfix">
+
+
                                 <div class="images col-lg-4 col-md-4">
-                                    <img class="smallimg" src="/Public/www/images/about2.png" alt="" />
+                                    <img src="/Public/www/images/about2.png">
                                 </div>
                                 <div class="images col-lg-4 col-md-4">
-                                    <img class="smallimg" src="/Public/www/images/about3.png" alt="" />
+                                    <img src="/Public/www/images/about3.png" alt="" />
                                 </div>
                                 <div class="images col-lg-4 col-md-4">
-                                    <img class="smallimg" src="/Public/www/images/about4.png" alt="" />
+                                    <img src="/Public/www/images/about4.png" alt="" />
                                 </div>
-                                <img src="" alt="" class="bigimg">
-                                <div class="mask">
-                                    <img src="__PUBLIC__/www/images/close.png" alt="">
-                                </div>
+
+
                             </div>
                         </div>
-
+                        <script>
+                            // about放大
+                            $('.example-box').viewer();
+                        </script>
 
 
                     </div>

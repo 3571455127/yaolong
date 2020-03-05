@@ -533,7 +533,7 @@ header .top-nav .list .nav-active a {
     color: #98979C;
     text-align: left;
     text-transform: capitalize;
-    padding: 50px 0 10px ;
+    padding: 50px 0 10px;
 }
 
 .index .contact .list .title span {
@@ -845,8 +845,6 @@ header .top-nav .list {
 }
 
 
-
-
 .index .contact .list .box-img {
     width: 20%;
     float: left;
@@ -855,4 +853,10 @@ header .top-nav .list {
 
 .index .contact .list .box-img img {
     height: 200px;
+}
+
+
+.index .about .images img {
+    width: 250px;
+    height: 350px;
 }
