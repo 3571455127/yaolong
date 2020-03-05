@@ -1,96 +1,158 @@
-
-
-    <div class="index">
-        <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n">
-                <div class="swiper-slide"><a href="{$r.link}"  title="{$r.title}"><img src="{$r.pic}" alt="{$r.title}"></a></div>
-                </YP:list>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+<div class="index">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n">
+                <div class="swiper-slide"><a href="{$r.link}" title="{$r.title}"><img src="{$r.pic}"
+                            alt="{$r.title}"></a></div>
+            </YP:list>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
 
-        <!-- odds -->
-        <div class="odds">
-            <a name="odds"></a>
-            <?php getcatvar('page','id = 77','cont');?>
-        </div>
+    <!-- odds -->
+    <div class="odds">
+        <a name="odds"></a>
+        <?php getcatvar('page','id = 77','cont');?>
+    </div>
 
-        <!-- product -->
-        <div class="product">
-            <a name="product"></a>
-            <?php getcatvar('page','id = 73','cont');?>
-        </div>
+    <!-- product -->
+    <div class="product">
+        <a name="product"></a>
+        <?php getcatvar('page','id = 73','cont');?>
+    </div>
 
-        <!-- news -->
-        <div class="news">
-            <a name="news"></a>
-            <?php getcatvar('page','id = 108','cont');?>
-        </div>
+    <!-- news -->
+    <div class="news">
+        <a name="news"></a>
+        <?php getcatvar('page','id = 108','cont');?>
+    </div>
 
 
-        <!-- about -->
-        <div class="about">
-            <a name="about"></a>
-            <?php getcatvar('page','id = 74','cont');?>
-        </div>
-
-        <!-- contact -->
-        <div class="contact">
-            <a name="contact"></a>
-            <h3>contact us</h3>
-            <div class="lines"></div>
+    <!-- about -->
+    <div class="about">
+        <a name="about"></a>
+        <!-- <?php getcatvar('page','id = 74','cont');?> -->
+        <h3>
+            about us
+        </h3>
+        <div class="content">
             <div class="container">
                 <div class="row">
-
-                    <div class="list">
-                        <div class="title"> Select Product <span> * </span> </div>
-                        <div class="box clearfix">
-                            <?php getcatvar('page','id = 78','cont');?>
+                    <div class="top clearfix">
+                        <div class="box-img col-lg-6 col-md-6">
+                            <img src="/Public/www/images/about1.png" alt="" />
+                        </div>
+                        <div class="txt col-lg-6 col-md-6">
+                            <div class="title">
+                                Guangdong Yaolong Metals Technology Co., Ltd
+                            </div>
+                            <p>
+                                Yaolong is established in 2004. The headquarter of the company is located in Foshan
+                                city,Guangdong province, China. We are a professional manufacturer engaged in the
+                                research, design, production and distribution of high-class stainless steel bollards.Our
+                                company has a complete series of advanced equipment from Germany, Japan, Italy and
+                                France, including 16meter long bending machine, plasma auto- welding machine, 12meter
+                                laser cutting machine, polishing facility etc.We have a team of professional designers,
+                                engineers and skillful welders.We have passed the authentication of the ISO 9001:2000
+                                International Quality Management System, the ISO14001 Environment Management System, the
+                                GB/T28001-2001 Occupational Health and Safety Management System.
+                            </p>
                         </div>
                     </div>
-
-                    <div class="form-box clearfix">
-
-                        <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
-                            action="index.php?g=Home&a=message">
-                            <div class="clearfix" style="padding-bottom:20px">
-<input name="forward" type="hidden" value="{$_SERVER['SERVER_NAME']}{if $catid}/index.php?m={$Categorys[$catid]['module']}&a=index&id={$catid}{else}/index.php{/if}"/>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Name <span> *</span></p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="name"></div>
+                    <div class="lines">
+                    </div>
+                    <div class="list">
+                        <h5>
+                            Certificate
+                        </h5>
+                        <div class="box-img">
+                            <img src="/Public/www/images/ico-about.png" alt="" />
+                        </div>
+                        <div>
+                          
+                            <div class="imgs clearfix">
+                                <div class="images col-lg-4 col-md-4">
+                                    <img class="smallimg" src="/Public/www/images/about2.png" alt="" />
                                 </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Email <span>*</span></p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="email"></div>
+                                <div class="images col-lg-4 col-md-4">
+                                    <img class="smallimg" src="/Public/www/images/about3.png" alt="" />
                                 </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Company name <span>*</span></p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="com"></div>
+                                <div class="images col-lg-4 col-md-4">
+                                    <img class="smallimg" src="/Public/www/images/about4.png" alt="" />
                                 </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Amount </p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="Amount"></div>
-                                </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p> Message</p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <textarea name="message"></textarea></div>
+                                <img src="" alt="" class="bigimg">
+                                <div class="mask">
+                                    <img src="__PUBLIC__/www/images/close.png" alt="">
                                 </div>
                             </div>
-                            <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
-                        </form>
+                        </div>
 
-                        
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- contact -->
+    <div class="contact">
+        <a name="contact"></a>
+        <h3>contact us</h3>
+        <div class="lines"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="list">
+                    <div class="title"> Select Product <span> * </span> </div>
+                    <div class="box clearfix">
+                        <?php getcatvar('page','id = 78','cont');?>
+                    </div>
+                </div>
+
+                <div class="form-box clearfix">
+
+                    <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
+                        action="index.php?g=Home&a=message">
+                        <div class="clearfix" style="padding-bottom:20px">
+                            <input name="forward" type="hidden"
+                                value="{$_SERVER['SERVER_NAME']}{if $catid}/index.php?m={$Categorys[$catid]['module']}&a=index&id={$catid}{else}/index.php{/if}" />
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Name <span> *</span></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="name"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Email <span>*</span></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="email"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Company name <span>*</span></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="com"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Amount </p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="Amount"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p> Message</p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <textarea name="message"></textarea></div>
+                            </div>
+                        </div>
+                        <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
+                    </form>

@@ -189,27 +189,27 @@ header .top-bar .top-share img {
 
 }
 
-header .nav {
-    height: 180px;
+header .top-nav {
+
     box-shadow: 1px 4px 15px 0px rgba(13, 14, 15, 0.3);
 }
 
-header .nav .logo {
+header .top-nav .logo {
     position: relative;
     padding: 40px 0;
 }
 
-header .nav .logo img {
+header .top-nav .logo img {
     width: 80%;
 }
 
 
-header .nav .list li {
+header .top-nav .list li {
     float: left;
 
 }
 
-header .nav .list li a {
+header .top-nav .list li a {
     font-size: 22px;
     color: #706F74;
     line-height: 178px;
@@ -217,23 +217,25 @@ header .nav .list li a {
     text-transform: uppercase;
 }
 
-header .nav .list,
-header .nav .list li:last-child a {
+header .top-nav .list,
+header .top-nav .list li:last-child a {
     padding-right: 0;
 }
 
-header .nav .list a:hover {
+header .top-nav .list a:hover {
     text-decoration: none;
     color: #2011;
 }
 
-header .nav .list .nav-active a {
+header .top-nav .list .nav-active a {
     color: #201156;
 }
 
 /* index */
-.index .swiper-wrapper img {
-    max-width: 100%;
+
+
+.index .swiper-wrapper a {
+    display: inline-block;
 }
 
 .index .swiper-pagination-bullet-active {
@@ -248,7 +250,6 @@ header .nav .list .nav-active a {
 
 .index .odds img,
 .index .product img,
-.index .about img,
 .index .contact img {
     max-width: 100%;
     height: 100%;
@@ -339,14 +340,13 @@ header .nav .list .nav-active a {
 .index .product .list .txt {
     padding: 0;
     margin: 0;
-    height: 640px;
     position: relative;
 }
 
 .index .product .list .txt .box {
     width: 80%;
     position: absolute;
-    top: 65%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -360,13 +360,14 @@ header .nav .list .nav-active a {
     padding-bottom: 30px;
     align-items: center;
     justify-content: center;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .index .product .list .txt {
     font-size: 20px;
     line-height: 1.4;
     color: #727275;
+    word-wrap: break-word;
 }
 
 /* news */
@@ -532,7 +533,7 @@ header .nav .list .nav-active a {
     color: #98979C;
     text-align: left;
     text-transform: capitalize;
-    padding: 50px 0 10px 15px;
+    padding: 50px 0 10px ;
 }
 
 .index .contact .list .title span {
@@ -697,30 +698,60 @@ header .infos a {
     color: #737277;
 }
 
+
+
 /* 响应式处理 */
 @media screen and (max-width:1920px) {
 
-    .index .list .content {
-        height: 360px;
+    .index .product .list .txt .box {
+        top: 50%;
+    }
+
+    .index .product .list .imgs,
+    .index .product .list .txt {
+        height: 390px;
+    }
+
+    .index .swiper-wrapper img {
+        max-width: 100%;
     }
 }
 
 @media screen and (max-width:1366px) {
 
-    /* .index .list .content {
-        min-height: 380px;
-    } */
 
-    header .nav {
-        height: 130px;
+    .index .swiper-wrapper img {
+        max-width: 100%;
+        width: 100%;
+        height: 500px;
     }
 
-    header .nav .logo {
-        padding: 26px 0;
+    .index .swiper-wrapper swiper-wrapper {
+        width: 100%;
     }
 
-    header .nav .list li a {
-        line-height: 130px;
+    header .top-nav .logo img {
+        width: 60%;
+    }
+
+    header .top-bar {
+        height: 40px;
+    }
+
+    header .top-bar .infos {
+        line-height: 40px;
+    }
+
+    header .top-nav {
+        height: 70px;
+    }
+
+    header .top-nav .logo {
+        padding: 6px 0;
+    }
+
+    header .top-nav .list li a {
+        line-height: 70px;
     }
 
     .index .odds h3,
@@ -732,11 +763,11 @@ header .infos a {
     }
 
     .index .odds img {
-        width: 30%;
+        width: 22%;
     }
 
     .index .odds .box .list .box-img {
-        min-height: 100px;
+        min-height: 66px;
     }
 
     .index .odds .box .list .ico {
@@ -751,12 +782,10 @@ header .infos a {
 
     .index .product .list .imgs,
     .index .product .list .txt {
-        height: 450px;
+        height: 390px;
     }
 
-    .index .product .list .txt .box {
-        top: 70%;
-    }
+
 
     .index .product .list .txt .title,
     .index .contact .list .title {
@@ -769,7 +798,7 @@ header .infos a {
     }
 
     .index .contact .list .box .box-img {
-        height: 360px;
+        /* height: 360px; */
     }
 
     .index .contact {
@@ -801,6 +830,29 @@ header .infos a {
     }
 }
 
-header .nav .list {
+header .top-nav .list {
     padding-left: 96px;
+}
+
+.index .top .box-img img {
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.index .about .images img {
+    cursor: pointer;
+    max-width: 100%;
+}
+
+
+
+
+.index .contact .list .box-img {
+    width: 20%;
+    float: left;
+    margin-right: 0;
+}
+
+.index .contact .list .box-img img {
+    height: 200px;
 }

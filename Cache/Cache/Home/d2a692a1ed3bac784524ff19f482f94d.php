@@ -31,17 +31,28 @@
         }
     </style>
     <script type="text/javascript" src="__PUBLIC__/www/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/www/js/zoom.js"></script>
+    <script>
+        $(function () {
+            /*
+             smallimg   // 小图
+             bigimg  //点击放大的图片
+             mask   //黑色遮罩
+             */
+            var obj = new zoom('mask', 'bigimg', 'smallimg');
+            obj.init();
+        })
+    </script>
 </head>
 
 <body>
     <!-- header -->
+
     <header>
         <div class="container">
             <div class="row">
 
-                <!-- 顶部联系信息 -->
                 <div class="top-bar clearfix">
-                    <!-- 电话与邮箱 -->
                     <div class="infos">
                         <div class="phone pull-left">
                             <img src="__PUBLIC__/www/images/phone.png" alt="">
@@ -49,127 +60,194 @@
                         </div>
                         <div class="email pull-left">
                             <img src="__PUBLIC__/www/images/email.png" alt="">
-                            <a href="mailto:<?php echo ($email); ?>" target="_blank" style="color:#524F3F"><span>Email:<?php echo ($email); ?></span></a></div>
+                            <a href="mailto:<?php echo ($email); ?>" target="_blank"
+                                style="color:#524F3F"><span>Email:<?php echo ($email); ?></span></a></div>
                     </div>
                 </div>
+
             </div>
         </div>
-        <!-- 导航 -->
-        <div class="nav clearfix">
+
+        <div class="top-nav clearfix">
             <div class="container">
                 <div class="row">
-                    <div class="logo col-lg-4 col-md-4 col-sm-4">
-                        <img src="__PUBLIC__/www/images/logo.png" alt="">
+                    <div class="clearfix">
+                        <div class="logo col-lg-4 col-md-4 col-sm-4">
+                            <img src="__PUBLIC__/www/images/logo.png" alt="">
+                        </div>
+                        <div class="list col-lg-8 col-md-8 col-sm-8">
+                            <ul class="clearfix">
+                                <li class="nav-active"><a href="javascript:;">HOME</a></li>
+                                <li><a href="#product">PRODUCT</a></li>
+                                <li><a href="#news">NEWS</a></li>
+                                <li><a href="#about">About us</a></li>
+                                <li><a href="#contact">Contact us</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="list col-lg-8 col-md-8 col-sm-8">
-                        <ul class="clearfix">
-                            <li class="nav-active"><a href="javascript:;">HOME</a></li>
-                            <li><a href="#product">PRODUCT</a></li>
-                            <li><a href="#news">NEWS</a></li>
-                            <li><a href="#about">About us</a></li>
-                            <li><a href="#contact">Contact us</a></li>
-                        </ul>
-                    </div>
+
                 </div>
             </div>
 
         </div>
 
     </header>
-
-
-    <div class="index">
-        <!-- Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide"><a href="<?php echo ($r["link"]); ?>"  title="<?php echo ($r["title"]); ?>"><img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>"></a></div><?php endforeach; endif;?>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+<div class="index">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide"><a href="<?php echo ($r["link"]); ?>" title="<?php echo ($r["title"]); ?>"><img src="<?php echo ($r["pic"]); ?>"
+                            alt="<?php echo ($r["title"]); ?>"></a></div><?php endforeach; endif;?>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
 
-        <!-- odds -->
-        <div class="odds">
-            <a name="odds"></a>
-            <?php getcatvar('page','id = 77','cont');?>
-        </div>
+    <!-- odds -->
+    <div class="odds">
+        <a name="odds"></a>
+        <?php getcatvar('page','id = 77','cont');?>
+    </div>
 
-        <!-- product -->
-        <div class="product">
-            <a name="product"></a>
-            <?php getcatvar('page','id = 73','cont');?>
-        </div>
+    <!-- product -->
+    <div class="product">
+        <a name="product"></a>
+        <?php getcatvar('page','id = 73','cont');?>
+    </div>
 
-        <!-- news -->
-        <div class="news">
-            <a name="news"></a>
-            <?php getcatvar('page','id = 108','cont');?>
-        </div>
+    <!-- news -->
+    <div class="news">
+        <a name="news"></a>
+        <?php getcatvar('page','id = 108','cont');?>
+    </div>
 
 
-        <!-- about -->
-        <div class="about">
-            <a name="about"></a>
-            <?php getcatvar('page','id = 74','cont');?>
-        </div>
-
-        <!-- contact -->
-        <div class="contact">
-            <a name="contact"></a>
-            <h3>contact us</h3>
-            <div class="lines"></div>
+    <!-- about -->
+    <div class="about">
+        <a name="about"></a>
+        <!-- <?php getcatvar('page','id = 74','cont');?> -->
+        <h3>
+            about us
+        </h3>
+        <div class="content">
             <div class="container">
                 <div class="row">
-
-                    <div class="list">
-                        <div class="title"> Select Product <span> * </span> </div>
-                        <div class="box clearfix">
-                            <?php getcatvar('page','id = 78','cont');?>
+                    <div class="top clearfix">
+                        <div class="box-img col-lg-6 col-md-6">
+                            <img src="/Public/www/images/about1.png" alt="" />
+                        </div>
+                        <div class="txt col-lg-6 col-md-6">
+                            <div class="title">
+                                Guangdong Yaolong Metals Technology Co., Ltd
+                            </div>
+                            <p>
+                                Yaolong is established in 2004. The headquarter of the company is located in Foshan
+                                city,Guangdong province, China. We are a professional manufacturer engaged in the
+                                research, design, production and distribution of high-class stainless steel bollards.Our
+                                company has a complete series of advanced equipment from Germany, Japan, Italy and
+                                France, including 16meter long bending machine, plasma auto- welding machine, 12meter
+                                laser cutting machine, polishing facility etc.We have a team of professional designers,
+                                engineers and skillful welders.We have passed the authentication of the ISO 9001:2000
+                                International Quality Management System, the ISO14001 Environment Management System, the
+                                GB/T28001-2001 Occupational Health and Safety Management System.
+                            </p>
                         </div>
                     </div>
-
-                    <div class="form-box clearfix">
-
-                        <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
-                            action="index.php?g=Home&a=message">
-                            <div class="clearfix" style="padding-bottom:20px">
-<input name="forward" type="hidden" value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>"/>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Name <span> *</span></p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="name"></div>
+                    <div class="lines">
+                    </div>
+                    <div class="list">
+                        <h5>
+                            Certificate
+                        </h5>
+                        <div class="box-img">
+                            <img src="/Public/www/images/ico-about.png" alt="" />
+                        </div>
+                        <div>
+                          
+                            <div class="imgs clearfix">
+                                <div class="images col-lg-4 col-md-4">
+                                    <img class="smallimg" src="/Public/www/images/about2.png" alt="" />
                                 </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Email <span>*</span></p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="email"></div>
+                                <div class="images col-lg-4 col-md-4">
+                                    <img class="smallimg" src="/Public/www/images/about3.png" alt="" />
                                 </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Company name <span>*</span></p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="com"></div>
+                                <div class="images col-lg-4 col-md-4">
+                                    <img class="smallimg" src="/Public/www/images/about4.png" alt="" />
                                 </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p>Amount </p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <input type="text" name="Amount"></div>
-                                </div>
-                                <div class="box clearfix">
-                                    <div class="box-left col-lg-4 col-md-4">
-                                        <p> Message</p>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8"> <textarea name="message"></textarea></div>
+                                <img src="" alt="" class="bigimg">
+                                <div class="mask">
+                                    <img src="__PUBLIC__/www/images/close.png" alt="">
                                 </div>
                             </div>
-                            <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
-                        </form>
+                        </div>
 
-                        
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- contact -->
+    <div class="contact">
+        <a name="contact"></a>
+        <h3>contact us</h3>
+        <div class="lines"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="list">
+                    <div class="title"> Select Product <span> * </span> </div>
+                    <div class="box clearfix">
+                        <?php getcatvar('page','id = 78','cont');?>
+                    </div>
+                </div>
+
+                <div class="form-box clearfix">
+
+                    <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
+                        action="index.php?g=Home&a=message">
+                        <div class="clearfix" style="padding-bottom:20px">
+                            <input name="forward" type="hidden"
+                                value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>" />
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Name <span> *</span></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="name"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Email <span>*</span></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="email"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Company name <span>*</span></p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="com"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p>Amount </p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <input type="text" name="Amount"></div>
+                            </div>
+                            <div class="box clearfix">
+                                <div class="box-left col-lg-4 col-md-4">
+                                    <p> Message</p>
+                                </div>
+                                <div class="col-lg-8 col-md-8"> <textarea name="message"></textarea></div>
+                            </div>
+                        </div>
+                        <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
+                    </form>
 <div class="details col-lg-5 col-md-7">
                             <div class="boxs clearfix">
                                 <div class="boxs-img col-lg-2 col-md-2"><img src="/Public/www/images/ico-contact1.png" alt=""></div>
