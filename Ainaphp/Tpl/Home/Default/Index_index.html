@@ -58,6 +58,7 @@
                 </div>
                 <div class="list">
                     <div class="title"> Select Product <span> * </span> </div>
+<<<<<<< HEAD
                     <div class="box clearfix">
                         <!-- <?php getcatvar('page','id = 78','cont');?> -->
                        
@@ -91,8 +92,50 @@
                         <div class="box-img" title="active10">
                             <img src="/Public/www/images/contact10.png" alt="" />
                         </div>
+=======
+                    <div class="box clearfix selectproduct">
+                        <!--<?php getcatvar('page','id = 78','cont');?>-->
+<YP:list name="slide_data" id="r" limit="10" field="*" where="fid = 3" key="n">       
+    <div class="box-img" title="{$r.title}" onclick="checkedf(this);" check="0">
+	<img src="{$r.pic}" alt="{$r.title}">
+</div>
+</YP:list>                       
+<!--<div class="box-img">
+	<img src="/Public/www/images/contact1.png" alt=""  /> 
+</div>-->
+>>>>>>> 566ec6173f8bcfc5afa6c2d35578835470892120
 
                     </div>
+                    <style>
+                        .redborder img{border:2px solid red;}
+                    </style>
+                    <script>
+//    alert(1);
+function checkedf(obj){
+    var check = parseInt($(obj).attr('check'));
+//    alert(check);
+    if(check){
+        $(obj).attr('check',0);
+        $(obj).removeClass('redborder');
+    }else{
+        $(obj).attr('check',1);
+        $(obj).addClass('redborder');
+    }
+    sproduct();
+}
+
+function sproduct(){
+    var producttitle = '';
+    $('.selectproduct').find('div').each(function(){
+        var check = parseInt($(this).attr('check'));
+        if(check){
+//            alert($(this).attr('title'));
+            producttitle += $(this).attr('title')+';';
+        }
+        $('#product').val(producttitle);
+    })
+}
+                    </script>
                 </div>
 
                 <div class="form-box clearfix">
@@ -102,6 +145,7 @@
                         <div class="clearfix" style="padding-bottom:20px">
                             <input name="forward" type="hidden"
                                 value="{$_SERVER['SERVER_NAME']}{if $catid}/index.php?m={$Categorys[$catid]['module']}&a=index&id={$catid}{else}/index.php{/if}" />
+                            <input type="hidden" name="product" id="product" value="" />
                             <div class="box clearfix">
                                 <div class="box-left col-lg-4 col-md-4">
                                     <p>Name <span> *</span></p>
