@@ -70,7 +70,7 @@
                         <div class="list col-lg-8 col-md-8 col-sm-8">
                             <ul class="clearfix">
                                 <li class="nav-active"><a href="javascript:;">HOME</a></li>
-                                <li><a href="#product">PRODUCT</a></li>
+                                <li><a href="#products">PRODUCT</a></li>
                                 <li><a href="#news">NEWS</a></li>
                                 <li><a href="#about">About us</a></li>
                                 <li><a href="#contact">Contact us</a></li>
@@ -104,7 +104,7 @@
 
     <!-- product -->
     <div class="product">
-        <a name="product"></a>
+        <a name="products"></a>
         <?php getcatvar('page','id = 73','cont');?>
     </div>
 
