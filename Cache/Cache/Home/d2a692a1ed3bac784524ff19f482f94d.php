@@ -65,12 +65,12 @@
                 <div class="row">
                     <div class="clearfix">
                         <div class="logo col-lg-4 col-md-4 col-sm-4">
-                            <img src="__PUBLIC__/www/images/logo.png" alt="">
+                            <a href="/index.php"><img src="__PUBLIC__/www/images/logo.png" alt=""></a>
                         </div>
                         <div class="list col-lg-8 col-md-8 col-sm-8">
                             <ul class="clearfix">
-                                <li class="nav-active"><a href="javascript:;">HOME</a></li>
-                                <li><a href="#products">PRODUCT</a></li>
+                                <li class="nav-active"><a href="/index.php">HOME</a></li>
+                                <li><a href="#product">PRODUCT</a></li>
                                 <li><a href="#news">NEWS</a></li>
                                 <li><a href="#about">About us</a></li>
                                 <li><a href="#contact">Contact us</a></li>
@@ -88,7 +88,7 @@
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide"><a href="<?php echo ($r["link"]); ?>" title="<?php echo ($r["title"]); ?>"><img src="<?php echo ($r["pic"]); ?>"
+            <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide"><a href="<?php echo ($r["link"]); ?>" title="<?php echo ($r["title"]); ?>" target="_blank"><img src="<?php echo ($r["pic"]); ?>"
                             alt="<?php echo ($r["title"]); ?>"></a></div><?php endforeach; endif;?>
         </div>
         <div class="swiper-pagination"></div>
@@ -104,7 +104,7 @@
 
     <!-- product -->
     <div class="product">
-        <a name="products"></a>
+        <a name="product"></a>
         <?php getcatvar('page','id = 73','cont');?>
     </div>
 
