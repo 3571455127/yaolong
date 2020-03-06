@@ -882,3 +882,18 @@ header .top-nav .list {
 .index .contact .list .box .active img {
     border: 2px solid red;
 }
+
+/* thanks */
+.thanks h5 {
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.4;
+    padding: 50px 0 20px 0;
+
+}
+
+.thanks p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+}

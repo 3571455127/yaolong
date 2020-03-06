@@ -479,3 +479,20 @@ header .menu .nav-ul a {
 .about-boxp {
     text-align: center;
 }
+
+.thanks {
+    padding: 5%;
+}
+
+.thanks h5 {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.thanks p {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 14px;
+}

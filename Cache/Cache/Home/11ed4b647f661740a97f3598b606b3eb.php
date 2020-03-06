@@ -1,3 +1,81 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="<?php echo ($seo_keywords); ?>" />
+    <meta name="description" content="<?php echo ($seo_description); ?>" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title><?php if(MODULE_NAME != 'Index') : echo ($seo_title); else : echo ($site_name); endif;?></title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="__PUBLIC__/wap/css/swiper-4.5.0.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/wap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/wap/css/reset.css">
+    <link rel="stylesheet" href="__PUBLIC__/www/css/viewer.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/wap/css/main.css">
+    <script type="text/javascript" src="__PUBLIC__/wap/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/www/js/viewer.min.js"></script>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <!-- <div class="top-bar">
+            <div class="infos clearfix">
+                <div class="phone pull-left">
+                    <img src="__PUBLIC__/wap/images/phone.png" alt="">
+                    <span>Tel:86-18318897233</span>
+                </div>
+                <div class="email pull-left">
+                    <img src="__PUBLIC__/wap/images/email.png" alt="">
+                    <span>Email:inquiry@fsyaolong.com</span></div>
+            </div>
+        </div> -->
+        <div class="top">
+            <div class="logo"><a href="">
+                    <img src="__PUBLIC__/wap/images/logo.png" alt="">
+                </a></div>
+
+            <div class="menu">
+                <img src="__PUBLIC__/wap/images/menu.png" alt="" class="menu-btn">
+                <div class="nav-ul">
+                    <a href="javascript:;">HOME</a>
+                    <a href="#product">PRODUCT</a>
+                    <a href="#news">NEWS</a>
+                    <a href="#about">About us</a>
+                    <a href="#contact">Contact us</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+<!-- 中间内容 -->
+    <!--轮播图-->
+    <!-- <div class="index">
+        <div class="top_img">
+            <img src="__PUBLIC__/wap/images/top_img.jpg" alt="" />
+        </div>
+    </div>
+    <div class="index_content">
+        <div class="contact_2">
+            <h6 style="margin-bottom: 1px;">Thanks for your inquiry!</h6>
+            <p>Our Professional Team Will Contact With You In 24 Hours.</p>
+        </div>
+        
+        <div class="contact_3">
+            <iframe src="http://www.google.cn/maps/embed?pb=!1m18!1m12!1m3!1d3677.8552198953444!2d113.23522731543332!3d22.807827985062172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340248e1962a1313%3A0x32246cb8177d4ac2!2z5bm_5Lic55yB5L2b5bGx5biC6aG65b635Yy66L-e5a6J57q_!5e0!3m2!1szh-CN!2scn!4v1539765743992" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div> -->
+    <div class="thanks">
+        <h5>Thanks for your inquiry!</h5>
+        <p>Our Professional Team Will Contact With You In 24 Hours.</p>
+    </div>
  <div class="index">
      <!-- contact -->
      <div class="contact">
@@ -10,11 +88,9 @@
                  <div class="swiper-container">
                      <div class="swiper-wrapper">
                          <!--<?php getcatvar('page','id = 78','pcont');?>-->
-                         <YP:list name="slide_data" id="r" limit="10" field="*" where="fid = 3" key="n">
-                             <div class="swiper-slide" title="{$r.title}" onclick="checkedf(this);" check="0">
-                                 <img src="{$r.pic}" alt="{$r.title}">
-                             </div>
-                         </YP:list>
+                         <?php  $_result=M("slide_data")->field("*")->where("fid = 3 AND status=1 ")->order("id desc")->limit("10")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide" title="<?php echo ($r["title"]); ?>" onclick="checkedf(this);" check="0">
+                                 <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>">
+                             </div><?php endforeach; endif;?>
                      </div>
                      <div class="swiper-pagination"></div>
                  </div>
@@ -96,25 +172,25 @@
                  <div class="boxs clearfix">
                      <div class="boxs-img"><img src="__PUBLIC__/wap/images/ico-contact1.png" alt=""></div>
                      <div class="boxs-txt">
-                         {$address}
+                         <?php echo ($address); ?>
                      </div>
                  </div>
                  <div class="boxs clearfix">
                      <div class="boxs-img"><img src="__PUBLIC__/wap/images/ico-contact2.png" alt=""></div>
                      <div class="boxs-txt">
-                         <a class="emails" href="mailto:{$email}" target="_blank">Email:{$email}</a>
+                         <a class="emails" href="mailto:<?php echo ($email); ?>" target="_blank">Email:<?php echo ($email); ?></a>
                      </div>
                  </div>
                  <div class="boxs clearfix">
                      <div class="boxs-img"><img src="__PUBLIC__/wap/images/ico-contact3.png" alt=""></div>
                      <div class="boxs-txt">
-                         Phone:{$phone}
+                         Phone:<?php echo ($phone); ?>
                      </div>
                  </div>
                  <div class="boxs clearfix">
                      <div class="boxs-img"><img src="__PUBLIC__/wap/images/ico-contact4.png" alt=""></div>
                      <div class="boxs-txt">
-                         Tel:{$Tel}
+                         Tel:<?php echo ($Tel); ?>
                      </div>
                  </div>
              </div>
