@@ -134,10 +134,48 @@
         <div class="container">
             <div class="row">
 
+                <div class="contact-top">
+                    <h5>If You Interest In Our Company And Product, Please Fill Out The Following Information Or Send Us
+                        An
+                        Email：</h5>
+                    <a class="emails" href="mailto:<?php echo ($email); ?>" target="_blank" style="color:#737277">Email:<?php echo ($email); ?></a>
+                </div>
                 <div class="list">
                     <div class="title"> Select Product <span> * </span> </div>
                     <div class="box clearfix">
-                        <?php getcatvar('page','id = 78','cont');?>
+                        <!-- <?php getcatvar('page','id = 78','cont');?> -->
+                       
+                        <div class="box-img" checked title="active">
+                            <img src="/Public/www/images/contact1.png" alt="" />
+                        </div>
+                        <div class="box-img" title="active2">
+                            <img src="/Public/www/images/contact2.png" alt="" />
+                        </div>
+                        <div class="box-img" title="active3">
+                            <img src="/Public/www/images/contact3.png" alt="" />
+                        </div>
+                        <div class="box-img" title="active4">
+                            <img src="/Public/www/images/contact4.png" alt="" />
+                        </div>
+                        <div class="box-img" title="active5">
+                            <img src="/Public/www/images/contact5.png" alt="" />
+                        </div>
+                        <div class="box-img" title="active6">
+                            <img src="/Public/www/images/contact6.png" alt="" />
+                        </div>
+                        <div class="box-img" title="active7">
+                            <img src="/Public/www/images/contact7.png" alt="" />
+                        </div>
+                        <div class="box-img" title="active8">
+                            <img src="/Public/www/images/contact8.png" alt="" />
+                        </div>
+                        <div class="box-img" title="active9">
+                            <img src="/Public/www/images/contact9.png" alt="" />
+                        </div>
+                        <div class="box-img" title="active10">
+                            <img src="/Public/www/images/contact10.png" alt="" />
+                        </div>
+
                     </div>
                 </div>
 

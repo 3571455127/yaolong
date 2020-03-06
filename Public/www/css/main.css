@@ -541,6 +541,20 @@ header .top-nav .list .nav-active a {
 
 }
 
+.index .contact h5 {
+    padding: 30px 0 15px 0;
+    font-size: 18px;
+}
+
+.index .contact .emails {
+    color: #727275;
+}
+
+
+.index .contact .contact-top {
+    text-align: center;
+}
+
 .index .contact .list .box .box-img {
     margin-bottom: 30px;
 }
@@ -859,4 +873,12 @@ header .top-nav .list {
 .index .about .images img {
     width: 250px;
     height: 350px;
+}
+
+.index .contact .list .box img {
+    cursor: pointer;
+}
+
+.index .contact .list .box .active img {
+    border: 2px solid red;
 }

@@ -34,9 +34,48 @@ $(function () {
         }, 500);
     });
 
+    $(".index .contact .list .box .box-img").click(function () {
+        // 选中样式
+        var avtiveColor = $(this).hasClass('active');
+        // console.log(avtiveColor)
+        if (avtiveColor === false) {
+            $(this).addClass('active')
+        } else {
+            $(this).removeClass('active')
+        }
+        var arr = [];
+        var thiss = $(this)
+        for (i = 0; i < thiss.length; i++) {
+            if (!avtiveColor) {
+                // var imgTitle = $(this).attr('title')
+                // console.log(imgTitle)
+                arr[i] = $(this).attr('title');
 
-  
+            }
 
+
+        }
+        // console.log(arr);
+        // 将数组合并成字符串
+        arrToStr = arr.toString();
+        console.log(arrToStr);
+        console.log(typeof arrToStr);
+
+
+    })
+
+    // 获取值
+    // var boxImg = $(".index .contact .list .box .box-img");
+    // for (i = 0; i < boxImg.length; i++) {
+    //     boxImg[i].onclick = function () {
+    //         var avtiveColor = $(this).hasClass('active');
+    //         if (avtiveColor) {
+    //             var imgTitle = $(this).attr('title')
+    //             console.log(imgTitle)
+    //         }
+
+    //     }
+    // }
 
 })
 

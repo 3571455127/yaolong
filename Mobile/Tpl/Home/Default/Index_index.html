@@ -1,97 +1,102 @@
-
-
-    <div class="index">
-        <!-- banner 轮播 -->
-        <div class="index-swiper">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 2" key="n">
+<div class="index">
+    <!-- banner 轮播 -->
+    <div class="index-swiper">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 2" key="n">
                     <div class="swiper-slide"><a href="{$r.link}" title="{$r.title}"><img src="{$r.pic}"
                                 alt="{$r.title}"></a></div>
-                    </YP:list>
+                </YP:list>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+
+    <!-- odds -->
+    <div class="odds">
+        <a name="odds"></a>
+        <?php getcatvar('page','id = 77','pcont');?>
+    </div>
+
+    <!-- product -->
+    <div class="product">
+        <a name="product"></a>
+        <?php getcatvar('page','id = 73','pcont');?>
+    </div>
+
+    <!-- news -->
+    <div class="news">
+        <a name="news"></a>
+        <?php getcatvar('page','id = 108','pcont');?>
+    </div>
+
+    <!-- about -->
+    <div class="about">
+        <a name="about"></a>
+        <?php getcatvar('page','id = 74','cont');?>
+
+
+
+        <script>
+            $('.example-box').viewer();
+        </script>
+
+    </div>
+
+    <!-- contact -->
+    <div class="contact">
+        <a name="contact"></a>
+        <h3>contact us</h3>
+
+        <div class="list">
+            <div class="title"> Select Product <span> * </span> </div>
+            <div class="box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <?php getcatvar('page','id = 78','pcont');?>
+
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
+        <div class="form-box clearfix">
 
+            <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
+                action="index.php?g=Home&a=message">
+                <div class="clearfix" style="padding-bottom:10px">
 
-        <!-- odds -->
-        <div class="odds">
-            <a name="odds"></a>
-             <?php getcatvar('page','id = 77','pcont');?>
-        </div>
-
-        <!-- product -->
-        <div class="product">
-            <a name="product"></a>
-            <?php getcatvar('page','id = 73','pcont');?>
-        </div>
-
-        <!-- news -->
-        <div class="news">
-            <a name="news"></a>
-            <?php getcatvar('page','id = 108','pcont');?>
-        </div>
-
-        <!-- about -->
-        <div class="about">
-            <a name="about"></a>
-            <?php getcatvar('page','id = 74','cont');?>
-        </div>
-
-        <!-- contact -->
-        <div class="contact">
-            <a name="contact"></a>
-            <h3>contact us</h3>
-
-            <div class="list">
-                <div class="title"> Select Product <span> * </span> </div>
-                <div class="box">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <?php getcatvar('page','id = 78','pcont');?>
-
+                    <div class="box">
+                        <div class="box-left">
+                            <p>Name <span> *</span></p>
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="box">
+                        <div class="box-left">
+                            <p>Email <span>*</span></p>
+                        </div>
+                        <input type="text" name="email">
+                    </div>
+                    <div class="box">
+                        <div class="box-left">
+                            <p>Company name <span>*</span></p>
+                        </div>
+                        <input type="text" name="com">
+                    </div>
+                    <div class="box">
+                        <div class="box-left">
+                            <p>Amount </p>
+                        </div>
+                        <input type="text" name="Amount">
+                    </div>
+                    <div class="box">
+                        <div class="box-left">
+                            <p> Message</p>
+                        </div>
+                        <textarea name="message"></textarea>
                     </div>
                 </div>
-            </div>
-            <div class="form-box clearfix">
-
-                <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
-                    action="index.php?g=Home&a=message">
-                    <div class="clearfix" style="padding-bottom:10px">
-
-                        <div class="box">
-                            <div class="box-left">
-                                <p>Name <span> *</span></p>
-                            </div>
-                            <input type="text" name="name">
-                        </div>
-                        <div class="box">
-                            <div class="box-left">
-                                <p>Email <span>*</span></p>
-                            </div>
-                            <input type="text" name="email">
-                        </div>
-                        <div class="box">
-                            <div class="box-left">
-                                <p>Company name <span>*</span></p>
-                            </div>
-                            <input type="text" name="com">
-                        </div>
-                        <div class="box">
-                            <div class="box-left">
-                                <p>Amount </p>
-                            </div>
-                            <input type="text" name="Amount">
-                        </div>
-                        <div class="box">
-                            <div class="box-left">
-                                <p> Message</p>
-                            </div>
-                            <textarea name="message"></textarea>
-                        </div>
-                    </div>
-                    <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
-                </form>
+                <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
+            </form>

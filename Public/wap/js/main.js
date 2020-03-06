@@ -19,7 +19,23 @@ $(function () {
         },
     });
 
+    $(".about-more").on('click', function () {
 
+        if ($(this).prev().hasClass("heightAuto")) {
+
+            $(this).text("MORE");
+
+            $(this).prev().removeClass("heightAuto")
+
+        } else {
+
+            $(this).text("UP");
+
+            $(this).prev().addClass("heightAuto")
+
+        }
+
+    })
 
 
     // 返回顶部
