@@ -42,7 +42,7 @@ class IndexAction extends BaseAction
 		//判断post值为空或空格
          $t = array_keys($_POST, '');//如果空格不算空，就用这条
          $t = array_keys(array_map('trim', $_POST), '');//如果空格算空，就用这条
-         if($t) { //有空数据项
+         if(!$_POST['email']) { //有空数据项
           $this->error("Send failed!"); //值就是为空的项提示错误
          }
 		 
@@ -57,7 +57,7 @@ class IndexAction extends BaseAction
           $this->error("The area is not in the service area！"); 
         }	
 		 
-		if(preg_match("/^[0-9-()+(^\s*)|(\s*$)]+$/",$this->_POST('phone'))){
+//		if(preg_match("/^[0-9-()+(^\s*)|(\s*$)]+$/",$this->_POST('phone'))){
 		
 		
 	    $body= " IP ADDRESS: ".$ADDRESS."<br>";	
@@ -102,9 +102,9 @@ class IndexAction extends BaseAction
 		}else{
 			$this->error("Send failed!");
 		}
-		}else{    
-         $this->error("The phone is wrong!"); //手机号码格式不对    
-        }
+//		}else{    
+//         $this->error("The phone is wrong!"); //手机号码格式不对    
+//        }
 	}
 	
 	//根据ip地址获取地址信息
