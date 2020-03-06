@@ -1,93 +1,97 @@
-<!-- 中间内容 -->
-    <!--轮播图-->
+
+
     <div class="index">
-        <div class="swiper-container swiper-container1">
-            <div class="swiper-wrapper">
-                <YP:flash flashid="2" />
-            </div>
-            <!-- 如果需要分页器 -->
-            <div class="swiper-pagination"></div>
-
-        </div>
-    </div>
-
-    <!--关于我们-->
-        <div class="index_about">
-            <img src="__PUBLIC__/wap/images/about.jpg" alt="" />
-            <div>
-                <h4>ABOUT US</h4>
-                <p>GUANGDONG METAL FORMING MACHINE WORKS CO.,LTD is a forging equipment manufacturer integrating professional design, research and development, manufacturing and service in South China. Is the first batch of domestic forging industry through ISO9001 enterprises, and has the "national backbone enterprise for forging equipment" and "national export bases", "national high-tech enterprises" more than ten honors.</p>
-            </div>
-            <br/>
-            <a class="more" href="/about.html">VIEW MORE</a>
-        </div>
-        
-    <!--首页产品列表-->
-    <div class="index_content">
-        <div class="index_pro" >
-            <h4 class="bioati">PRODUCTS</h4>
-            <div class="pro_list">
-                <div>
-                    <h4 class="biaoti_h4 active">PUNCHING MACHINE<span></span></h4>
-                    <h4 class="biaoti_h4">HYDRAULIC PRESS<span></span></h4>
+        <!-- banner 轮播 -->
+        <div class="index-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 2" key="n">
+                    <div class="swiper-slide"><a href="{$r.link}" title="{$r.title}"><img src="{$r.pic}"
+                                alt="{$r.title}"></a></div>
+                    </YP:list>
                 </div>
-                <ul class="pro_list_ul" >
-                    <YP:list catid="94" limit="3" order="id asc">
-                    <li>
-                        <a href="{$r.url}">
-                            <img src="{$r.thumb}" alt="" />
-                            <h5>{$r.keywords}</h5>
-                            <p>{$r.title}</p>
-                        </a>
-                    </li>
-                    </YP:list>
-                </ul>
-                <ul class="pro_list_ul" style="display: none;">
-                    <YP:list catid="95" limit="3" order="id asc">
-                    <li>
-                        <a href="{$r.url}">
-                            <img src="{$r.thumb}" alt="" />
-                            <h5>{$r.keywords}</h5>
-                            <p>{$r.title}</p>
-                        </a>
-                    </li>
-                    </YP:list>
-                </ul>
-                <a class="more" href="/product.html">VIEW MORE</a>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
-        <!--首页案例-->
-        <div class="case_list">
-            <h4 class="bioati">CASES</h4>
-            <ul class="case_list">
-                <YP:list catid="77" limit="2" order="id asc">
-                <li>
-                    <img src="{$r.thumb}" alt="" />
-                    <a href="{$r.url}">
-                        <h5>{$r.title}</h5>
-                    </a>
-                </li>
-                </YP:list>            
-            </ul>
-            <a class="more" href="/cases.html">VIEW MORE</a>
+
+
+        <!-- odds -->
+        <div class="odds">
+            <a name="odds"></a>
+             <?php getcatvar('page','id = 77','pcont');?>
         </div>
-        
-        <!--新闻列表-->
-        <div class="index_new">
-            <h4 class="bioati">NEWS</h4>
-            <ul class="new_ul">
-                <YP:list catid="108" limit="3" order="id asc">
-                <li>
-                    <a href="{$r.url}">
-                        <h5>{$r.title}</h5>
-                        <span>{$r.createtime|toDate=###,'Y-m-d'}</span>
-                        <p>{$r.description}</p>
-                    </a>
-                </li>
-                </YP:list>
-            </ul>
-            <a class="more" href="/news.html">VIEW MORE</a>
+
+        <!-- product -->
+        <div class="product">
+            <a name="product"></a>
+            <?php getcatvar('page','id = 73','pcont');?>
         </div>
-        
-        
-    </div>
+
+        <!-- news -->
+        <div class="news">
+            <a name="news"></a>
+            <?php getcatvar('page','id = 108','pcont');?>
+        </div>
+
+        <!-- about -->
+        <div class="about">
+            <a name="about"></a>
+            <?php getcatvar('page','id = 74','cont');?>
+        </div>
+
+        <!-- contact -->
+        <div class="contact">
+            <a name="contact"></a>
+            <h3>contact us</h3>
+
+            <div class="list">
+                <div class="title"> Select Product <span> * </span> </div>
+                <div class="box">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <?php getcatvar('page','id = 78','pcont');?>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-box clearfix">
+
+                <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
+                    action="index.php?g=Home&a=message">
+                    <div class="clearfix" style="padding-bottom:10px">
+
+                        <div class="box">
+                            <div class="box-left">
+                                <p>Name <span> *</span></p>
+                            </div>
+                            <input type="text" name="name">
+                        </div>
+                        <div class="box">
+                            <div class="box-left">
+                                <p>Email <span>*</span></p>
+                            </div>
+                            <input type="text" name="email">
+                        </div>
+                        <div class="box">
+                            <div class="box-left">
+                                <p>Company name <span>*</span></p>
+                            </div>
+                            <input type="text" name="com">
+                        </div>
+                        <div class="box">
+                            <div class="box-left">
+                                <p>Amount </p>
+                            </div>
+                            <input type="text" name="Amount">
+                        </div>
+                        <div class="box">
+                            <div class="box-left">
+                                <p> Message</p>
+                            </div>
+                            <textarea name="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
+                </form>
