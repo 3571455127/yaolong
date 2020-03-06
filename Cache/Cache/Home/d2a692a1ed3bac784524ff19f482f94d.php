@@ -142,6 +142,7 @@
                 </div>
                 <div class="list">
                     <div class="title"> Select Product <span> * </span> </div>
+<<<<<<< HEAD
                     <div class="box clearfix">
                         <!-- <?php getcatvar('page','id = 78','cont');?> -->
                        
@@ -175,8 +176,48 @@
                         <div class="box-img" title="active10">
                             <img src="/Public/www/images/contact10.png" alt="" />
                         </div>
+=======
+                    <div class="box clearfix selectproduct">
+                        <!--<?php getcatvar('page','id = 78','cont');?>-->
+<?php  $_result=M("slide_data")->field("*")->where("fid = 3 AND status=1 ")->order("id desc")->limit("10")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="box-img" title="<?php echo ($r["title"]); ?>" onclick="checkedf(this);" check="0">
+	<img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>">
+</div><?php endforeach; endif;?>                       
+<!--<div class="box-img">
+	<img src="/Public/www/images/contact1.png" alt=""  /> 
+</div>-->
+>>>>>>> 566ec6173f8bcfc5afa6c2d35578835470892120
 
                     </div>
+                    <style>
+                        .redborder img{border:2px solid red;}
+                    </style>
+                    <script>
+//    alert(1);
+function checkedf(obj){
+    var check = parseInt($(obj).attr('check'));
+//    alert(check);
+    if(check){
+        $(obj).attr('check',0);
+        $(obj).removeClass('redborder');
+    }else{
+        $(obj).attr('check',1);
+        $(obj).addClass('redborder');
+    }
+    sproduct();
+}
+
+function sproduct(){
+    var producttitle = '';
+    $('.selectproduct').find('div').each(function(){
+        var check = parseInt($(this).attr('check'));
+        if(check){
+//            alert($(this).attr('title'));
+            producttitle += $(this).attr('title')+';';
+        }
+        $('#product').val(producttitle);
+    })
+}
+                    </script>
                 </div>
 
                 <div class="form-box clearfix">
@@ -186,6 +227,7 @@
                         <div class="clearfix" style="padding-bottom:20px">
                             <input name="forward" type="hidden"
                                 value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>" />
+                            <input type="hidden" name="product" id="product" value="" />
                             <div class="box clearfix">
                                 <div class="box-left col-lg-4 col-md-4">
                                     <p>Name <span> *</span></p>
@@ -219,6 +261,7 @@
                         </div>
                         <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
                     </form>
+
 <div class="details col-lg-5 col-md-7">
                             <div class="boxs clearfix">
                                 <div class="boxs-img col-lg-2 col-md-2"><img src="/Public/www/images/ico-contact1.png" alt=""></div>
