@@ -12,7 +12,7 @@ header .top-bar span {
 .logo {
     box-shadow: 1px 4px 15px 0px rgba(13, 14, 15, 0.3);
 
-} 
+}
 
 
 .logo a {
@@ -214,6 +214,11 @@ header .top-bar span {
     width: 33%;
     float: left;
     padding-right: 2%;
+}
+
+.index .about .content .list .imgs .images img {
+
+    min-height: 127px;
 }
 
 .index .swiper-pagination-bullet-active {
