@@ -217,8 +217,7 @@ header .top-bar span {
 }
 
 .index .about .content .list .imgs .images img {
-
-    min-height: 127px;
+    min-height: 145px;
 }
 
 .index .swiper-pagination-bullet-active {
