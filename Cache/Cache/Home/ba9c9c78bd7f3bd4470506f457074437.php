@@ -89,14 +89,10 @@
     <!-- about -->
     <div class="about">
         <a name="about"></a>
-        <?php getcatvar('page','id = 74','cont');?>
-
-
-
+        <?php getcatvar('page','id = 74','pcont');?>
         <script>
             $('.example-box').viewer();
         </script>
-
     </div>
 
     <!-- contact -->
@@ -109,17 +105,52 @@
             <div class="box">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <?php getcatvar('page','id = 78','pcont');?>
-
+                        <!--<?php getcatvar('page','id = 78','pcont');?>-->
+                        <?php  $_result=M("slide_data")->field("*")->where("fid = 3 AND status=1 ")->order("id desc")->limit("10")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide" title="<?php echo ($r["title"]); ?>" onclick="checkedf(this);" check="0">
+                                <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>">
+                            </div><?php endforeach; endif;?>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
+        <style>
+            .redborder img {
+                border: 2px solid red;
+            }
+        </style>
+        <script>
+            //    alert(1);
+            function checkedf(obj) {
+                var check = parseInt($(obj).attr('check'));
+                //    alert(check);
+                if (check) {
+                    $(obj).attr('check', 0);
+                    $(obj).removeClass('redborder');
+                } else {
+                    $(obj).attr('check', 1);
+                    $(obj).addClass('redborder');
+                }
+                sproduct();
+            }
+
+            function sproduct() {
+                var producttitle = '';
+                $('.selectproduct').find('div').each(function () {
+                    var check = parseInt($(this).attr('check'));
+                    if (check) {
+                        //            alert($(this).attr('title'));
+                        producttitle += $(this).attr('title') + ';';
+                    }
+                    $('#product').val(producttitle);
+                })
+            }
+        </script>
         <div class="form-box clearfix">
 
             <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
                 action="index.php?g=Home&a=message">
+                <input type="hidden" name="product" id="product" value="" />
                 <div class="clearfix" style="padding-bottom:10px">
 
                     <div class="box">
