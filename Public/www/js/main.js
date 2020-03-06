@@ -2,6 +2,7 @@ $(function () {
     var swiper = new Swiper('.index .swiper-container', {
         loop: true,
         autoplay: true,
+        autoHeight: true,
         pagination: {
             el: '.index .swiper-pagination',
         },
