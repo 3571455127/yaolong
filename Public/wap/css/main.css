@@ -1,2 +1,635 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;outline-style:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html,body{font-family:"Arial","Microsoft YaHei","黑体","宋体","微软雅黑",sans-serif}body{line-height:1;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}ol,ul,li{list-style:none}input,select{vertical-align:middle}table{border-collapse:collapse;border-spacing:0}.clearfix::before,.clearfix::after{content:"";height:0;line-height:0;display:block;visibility:hidden;clear:both}.clearfix:after{clear:both}.clearfix{*zoom:1}a{color:#666;text-decoration:none!important;cursor:pointer}img{border:0;vertical-align:middle;cursor:pointer}.ac{text-align:center}header .top-bar{height:60px;line-height:60px}header .top-bar span{font-size:14px}.logo{box-shadow:1px 4px 15px 0 rgba(13,14,15,0.3)}.logo a{display:block;padding:20px}.logo a img{width:60%}.logo a img,.index img,.index .swiper-slide img,.index .about img,.index .partners img{max-width:100%;height:auto}.index h3{text-align:center;color:#1f1155;text-transform:uppercase;font-size:18px;font-weight:600;position:relative}.index h3::after{content:"";width:100px;height:1px;line-height:1px;background-color:#f27021;position:absolute;bottom:-10px;left:50%;transform:translateX(-50%)}.index .odds{padding:5% 0}.index .odds .box{background-color:#b4b4b4;padding:20px 0;margin:20px 0;text-align:center}.index .odds .box p{padding:6px 10%;line-height:1.4;font-size:13px;color:#fff;text-transform:uppercase}.index .odds .box .ico .box-img{height:40px;line-height:40px}.index .odds .box .ico:nth-child(5) img{width:26%}.index .odds .box img{width:15%}.index .product .list{padding:30px 5%}.index .product .list .txt{padding-bottom:30px}.index .product .list .title{color:#1f1155;font-weight:600;line-height:1.4;padding:8px 0}.index .product .list .content{color:#727275;line-height:1.4}.index .news{padding:50px 0 10px 0;border-top:10px solid #c5c4ca;border-bottom:10px solid #c5c4ca}.index .news .box{width:100%;padding:30px 5%;position:relative;padding-bottom:1px}.index .news .box .news-box{display:block;padding:5%;box-shadow:1px 4px 15px 0 rgba(13,14,15,0.3);margin-bottom:15px}.index .news .box .news-box .voice{width:30px;height:30px;float:left;margin-right:10px}.index .news .box .news-box .txt{width:85%;float:left;font-size:15px;font-weight:600;line-height:1.4;color:#252527}.index .news .more{display:block;width:110px;height:30px;line-height:30px;text-align:center;background-color:#f27021;color:#fff;border-radius:10px;font-size:14px;text-transform:uppercase;margin:20px auto}.index .about{padding:30px 0}.index .about .content{margin:20px 0;padding:30px 5%;background:url("../images/about-bg.png")no-repeat;background-size:cover}.index .about .content .txt{color:#fff;line-height:1.4}.index .about .content .box-img{padding-bottom:10px;text-align:center}.index .about .content .title{font-size:16px;font-weight:600;padding-bottom:10px}.index .about .content .lines{width:100%;height:3px;background-color:#fff;margin:30px 0}.index .about .content h5{text-align:center;font-weight:600;line-height:1.4;text-transform:uppercase;color:#fff;font-size:16px;padding-bottom:15px}.index .about .content .list .imgs .images{width:33%;float:left;padding-right:2%}.index .about .content .list .imgs .images img{min-height:145px}.index .swiper-pagination-bullet-active{background:#1f1155}.index .contact .list{padding:30px 5%}.index .contact .list .title{padding:6px 0;color:#98979c}.index .contact .list .title span{color:red}.index .contact form span{color:red}.index .contact .form-box .box{width:48%;float:left;margin-right:4%;padding-bottom:10px}.index .contact .form-box .box .box-left{padding-bottom:5px;color:#98979c;font-size:14px}.index .contact .form-box .box:nth-child(2n){margin-right:0}.index .contact .form-box .box input{width:100%;height:26px;line-height:26px;padding-left:10px;border:1px solid #a3a49f;background-color:#f1f0f0}.index .contact .form-box .box:last-child{width:100%;margin-right:0}.index .contact .form-box .box textarea{width:100%;height:80px;border:1px solid #a3a49f;background-color:#f1f0f0}.index .contact form .box-btns{text-align:center}.index .contact form .submit-btn{width:100px;height:36px;line-height:36px;border:0;border-radius:8px;text-align:center;color:#fff;background-color:#1f1155;font-weight:600;font-size:16px}
-.index .contact .details{padding:20px 5%}.index .contact .details .boxs{padding-bottom:10px}.index .contact .details .boxs-img{width:21px;float:left;margin-right:10px;text-align:center}.index .contact .details .boxs-txt{float:left;width:90%;line-height:1.4;font-size:15px;color:#737277}.index .contact .details .emails{color:#737277}.index .contact .details .boxs:nth-child(3) .boxs-txt{line-height:29px}.index .contact .details .boxs:nth-child(3) img{width:80%}footer .info img{max-width:100%;height:auto}footer .info .box{background-color:#f2f1f1}footer .info .box .box-img{width:8%;margin-right:5px;float:left}footer .info ul{padding:10px}footer .info .box .txt{float:left;width:90%}footer .info ul li{font-size:16px;line-height:1.4;overflow:hidden;padding:8px;padding-left:10%;word-wrap:break-word;word-break:normal}footer .info ul li:last-child{font-size:14px}footer .info .copy{font-size:16px;padding:2% 12%;line-height:1.4;text-transform:uppercase;background:#1f1155;color:#fff}.goTop{position:fixed;bottom:6rem;right:0;display:none;width:45px;height:45px;text-align:center;border-radius:10px;font-size:18px;background:#1f1155;color:#fff;cursor:pointer;z-index:999}.goTop .topIcon{display:inline-block;width:12px;height:12px;border-top:2px solid;border-left:2px solid #fff;transform:rotate(45deg);position:absolute;top:12px;left:36%}.goTop p{font-size:14px;padding-top:25px}header .top{position:relative}header .menu{position:absolute;top:35px;right:20px;z-index:9999}header .menu img{width:60%}header .menu .nav-ul{position:absolute;top:35px;left:-45px;background-color:#1f1155;padding:10px;display:none}header .menu .nav-ul a{color:#fff;display:block;padding-bottom:10px}.about-p{width:100%;height:70px;overflow:hidden;text-align:left}.heightAuto{height:auto}.about-more{color:red;padding:10px 0}.index .about a:focus,.index .about a:hover{color:red}.about-boxp{text-align:center}.thanks{padding:5%}.thanks h5{text-align:center;line-height:1.4;font-size:16px;padding:20px 0}.thanks p{text-align:center;line-height:1.4;font-size:14px}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    outline-style: none
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+html,
+body {
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", "微软雅黑", sans-serif
+}
+
+body {
+    line-height: 1;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+ol,
+ul,
+li {
+    list-style: none
+}
+
+input,
+select {
+    vertical-align: middle
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both
+}
+
+.clearfix:after {
+    clear: both
+}
+
+.clearfix {
+    *zoom: 1
+}
+
+a {
+    color: #666;
+    text-decoration: none !important;
+    cursor: pointer
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+    cursor: pointer
+}
+
+.ac {
+    text-align: center
+}
+
+header .top-bar {
+    height: 60px;
+    line-height: 60px
+}
+
+header .top-bar span {
+    font-size: 14px
+}
+
+.logo {
+    box-shadow: 1px 4px 15px 0 rgba(13, 14, 15, 0.3)
+}
+
+.logo a {
+    display: block;
+    padding: 20px
+}
+
+.logo a img {
+    width: 60%
+}
+
+.logo a img,
+.index img,
+.index .swiper-slide img,
+.index .about img,
+.index .partners img {
+    max-width: 100%;
+    height: auto
+}
+
+.index h3 {
+    text-align: center;
+    color: #1f1155;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative
+}
+
+.index h3::after {
+    content: "";
+    width: 100px;
+    height: 1px;
+    line-height: 1px;
+    background-color: #f27021;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.index .odds {
+    padding: 5% 0
+}
+
+.index .odds .box {
+    background-color: #b4b4b4;
+    padding: 20px 0;
+    margin: 20px 0;
+    text-align: center
+}
+
+.index .odds .box p {
+    padding: 6px 10%;
+    line-height: 1.4;
+    font-size: 13px;
+    color: #fff;
+    text-transform: uppercase
+}
+
+.index .odds .box .ico .box-img {
+    height: 40px;
+    line-height: 40px
+}
+
+/* .index .odds .box .ico:nth-child(5) img {
+    width: 26%
+} */
+
+.index .odds .box img {
+    width: 15%
+}
+
+.index .product .list {
+    padding: 30px 5%
+}
+
+.index .product .list .txt {
+    padding-bottom: 30px
+}
+
+.index .product .list .title {
+    color: #1f1155;
+    font-weight: 600;
+    line-height: 1.4;
+    padding: 8px 0
+}
+
+.index .product .list .content {
+    color: #727275;
+    line-height: 1.4
+}
+
+.index .news {
+    padding: 50px 0 10px 0;
+    border-top: 10px solid #c5c4ca;
+    border-bottom: 10px solid #c5c4ca
+}
+
+.index .news .box {
+    width: 100%;
+    padding: 30px 5%;
+    position: relative;
+    padding-bottom: 1px
+}
+
+.index .news .box .news-box {
+    display: block;
+    padding: 5%;
+    box-shadow: 1px 4px 15px 0 rgba(13, 14, 15, 0.3);
+    margin-bottom: 15px
+}
+
+.index .news .box .news-box .voice {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 10px
+}
+
+.index .news .box .news-box .txt {
+    width: 85%;
+    float: left;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #252527
+}
+
+.index .news .more {
+    display: block;
+    width: 110px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #f27021;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 20px auto
+}
+
+.index .about {
+    padding: 30px 0
+}
+
+.index .about .content {
+    margin: 20px 0;
+    padding: 30px 5%;
+    background: url("../images/about-bg.png")no-repeat;
+    background-size: cover
+}
+
+.index .about .content .txt {
+    color: #fff;
+    line-height: 1.4
+}
+
+.index .about .content .box-img {
+    padding-bottom: 10px;
+    text-align: center
+}
+
+.index .about .content .title {
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 10px
+}
+
+.index .about .content .lines {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    margin: 30px 0
+}
+
+.index .about .content h5 {
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 15px
+}
+
+.index .about .content .list .imgs .images {
+    width: 33%;
+    float: left;
+    padding-right: 2%
+}
+
+.index .about .content .list .imgs .images img {
+    min-height: 145px
+}
+
+.index .swiper-pagination-bullet-active {
+    background: #1f1155
+}
+
+.index .contact .list {
+    padding: 30px 5%
+}
+
+.index .contact .list .title {
+    padding: 6px 0;
+    color: #98979c
+}
+
+.index .contact .list .title span {
+    color: red
+}
+
+.index .contact form span {
+    color: red
+}
+
+.index .contact .form-box .box {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    padding-bottom: 10px
+}
+
+.index .contact .form-box .box .box-left {
+    padding-bottom: 5px;
+    color: #98979c;
+    font-size: 14px
+}
+
+.index .contact .form-box .box:nth-child(2n) {
+    margin-right: 0
+}
+
+.index .contact .form-box .box input {
+    width: 100%;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 10px;
+    border: 1px solid #a3a49f;
+    background-color: #f1f0f0
+}
+
+.index .contact .form-box .box:last-child {
+    width: 100%;
+    margin-right: 0
+}
+
+.index .contact .form-box .box textarea {
+    width: 100%;
+    height: 80px;
+    border: 1px solid #a3a49f;
+    background-color: #f1f0f0
+}
+
+.index .contact form .box-btns {
+    text-align: center
+}
+
+.index .contact form .submit-btn {
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    border: 0;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+    background-color: #1f1155;
+    font-weight: 600;
+    font-size: 16px
+}
+
+.index .contact .details {
+    padding: 20px 5%
+}
+
+.index .contact .details .boxs {
+    padding-bottom: 10px
+}
+
+.index .contact .details .boxs-img {
+    width: 21px;
+    float: left;
+    margin-right: 10px;
+    text-align: center
+}
+
+.index .contact .details .boxs-txt {
+    float: left;
+    width: 90%;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #737277
+}
+
+.index .contact .details .emails {
+    color: #737277
+}
+
+.index .contact .details .boxs:nth-child(3) .boxs-txt {
+    line-height: 29px
+}
+
+.index .contact .details .boxs:nth-child(3) img {
+    width: 80%
+}
+
+footer .info img {
+    max-width: 100%;
+    height: auto
+}
+
+footer .info .box {
+    background-color: #f2f1f1
+}
+
+footer .info .box .box-img {
+    width: 8%;
+    margin-right: 5px;
+    float: left
+}
+
+footer .info ul {
+    padding: 10px
+}
+
+footer .info .box .txt {
+    float: left;
+    width: 90%
+}
+
+footer .info ul li {
+    font-size: 16px;
+    line-height: 1.4;
+    overflow: hidden;
+    padding: 8px;
+    padding-left: 10%;
+    word-wrap: break-word;
+    word-break: normal
+}
+
+footer .info ul li:last-child {
+    font-size: 14px
+}
+
+footer .info .copy {
+    font-size: 16px;
+    padding: 2% 12%;
+    line-height: 1.4;
+    text-transform: uppercase;
+    background: #1f1155;
+    color: #fff
+}
+
+.goTop {
+    position: fixed;
+    bottom: 6rem;
+    right: 0;
+    display: none;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    background: #1f1155;
+    color: #fff;
+    cursor: pointer;
+    z-index: 999
+}
+
+.goTop .topIcon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid;
+    border-left: 2px solid #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 12px;
+    left: 36%
+}
+
+.goTop p {
+    font-size: 14px;
+    padding-top: 25px
+}
+
+header .top {
+    position: relative
+}
+
+header .menu {
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    z-index: 9999
+}
+
+header .menu img {
+    width: 60%
+}
+
+header .menu .nav-ul {
+    position: absolute;
+    top: 35px;
+    left: -45px;
+    background-color: #1f1155;
+    padding: 10px;
+    display: none
+}
+
+header .menu .nav-ul a {
+    color: #fff;
+    display: block;
+    padding-bottom: 10px
+}
+
+.about-p {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    text-align: left
+}
+
+.heightAuto {
+    height: auto
+}
+
+.about-more {
+    color: red;
+    padding: 10px 0
+}
+
+.index .about a:focus,
+.index .about a:hover {
+    color: red
+}
+
+.about-boxp {
+    text-align: center
+}
+
+.thanks {
+    padding: 5%
+}
+
+.thanks h5 {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 16px;
+    padding: 20px 0
+}
+
+.thanks p {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 14px
+}

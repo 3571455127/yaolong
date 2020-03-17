@@ -20,7 +20,6 @@
     <!-- css -->
     <link rel="stylesheet" href="__PUBLIC__/www/css/bootstrap.min.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/swiper-4.5.0.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/www/css/animate.min.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/viewer.min.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/main.css">
 
@@ -31,15 +30,44 @@
             src: url('__PUBLIC__/www/font/Roboto.ttf');
         }
     </style>
-   
+
     <script type="text/javascript" src="__PUBLIC__/www/js/jquery.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/www/js/viewer.min.js"></script>
-    
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MJRNG84');</script>
+<!-- End Google Tag Manager -->
+<script>
+     function IsPC() {
+          var userAgentInfo = navigator.userAgent;
+          var Agents = ["Android", "iPhone",
+                      "SymbianOS", "Windows Phone",
+                      "iPad", "iPod"];
+          var flag = true;
+          for (var v = 0; v < Agents.length; v++) {
+              if (userAgentInfo.indexOf(Agents[v]) > 0) {
+                  flag = false;
+                 break;
+             }
+         }
+         return flag;
+      }
+      var isp = IsPC();
+      if(!isp){
+            window.location.href="/mobile.php";
+      }
+</script>
 </head>
 
 <body>
     <!-- header -->
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJRNG84"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
     <header>
         <div class="container">
             <div class="row">
@@ -65,12 +93,12 @@
                 <div class="row">
                     <div class="clearfix">
                         <div class="logo col-lg-4 col-md-4 col-sm-4">
-                            <a href="/index.php"><img src="__PUBLIC__/www/images/logo.png" alt=""></a>
+                            <a href="/index.php"><img src="/Public/www/images/logo.png" alt=""></a>
                         </div>
                         <div class="list col-lg-8 col-md-8 col-sm-8">
                             <ul class="clearfix">
                                 <li class="nav-active"><a href="/index.php">HOME</a></li>
-                                <li><a href="#product">PRODUCT</a></li>
+                                <li><a href="#products">PRODUCT</a></li>
                                 <li><a href="#news">NEWS</a></li>
                                 <li><a href="#about">About us</a></li>
                                 <li><a href="#contact">Contact us</a></li>
@@ -104,7 +132,7 @@
 
     <!-- product -->
     <div class="product">
-        <a name="product"></a>
+        <a name="products"></a>
         <?php getcatvar('page','id = 73','cont');?>
     </div>
 
