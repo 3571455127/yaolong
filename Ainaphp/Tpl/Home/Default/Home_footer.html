@@ -4,13 +4,14 @@
          <a name="contact"></a>
          <h3>contact us</h3>
          <div class="lines"></div>
+         <h6>Two steps to getting free consultant</h6>
          <div class="container">
              <div class="row">
 
                  <div class="list">
-                     <div class="title"> Select Product <span> * </span> </div>
+                     <div class="title"> ①Select Product <span> * </span> </div>
                      <div class="box clearfix selectproduct">
-                         <!--<?php getcatvar('page','id = 78','cont');?>-->
+
                          <YP:list name="slide_data" id="r" limit="10" field="*" where="fid = 3" key="n">
                              <div class="box-img" title="{$r.title}" onclick="checkedf(this);" check="0">
                                  <img src="{$r.pic}" alt="{$r.title}">
@@ -54,6 +55,8 @@
                          }
                      </script>
                  </div>
+
+                 <div class="step2"> ②Fill & submit the form</div>
 
                  <div class="form-box clearfix">
 
@@ -151,6 +154,7 @@
          <i class="topIcon"></i>
          <p>TOP</p>
      </div>
+     <a href="#contact" class="footer-contact">Contact us</a>
  </footer>
 
  </body>

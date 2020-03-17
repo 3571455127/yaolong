@@ -124,22 +124,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="swiper-button-prev"></div>
     </div>
 
-    <!-- odds -->
-    <div class="odds">
-        <a name="odds"></a>
-        <?php getcatvar('page','id = 77','cont');?>
-    </div>
-
     <!-- product -->
     <div class="product">
         <a name="products"></a>
         <?php getcatvar('page','id = 73','cont');?>
     </div>
 
+    <!-- odds -->
+    <div class="odds">
+        <a name="odds"></a>
+        <?php getcatvar('page','id = 77','cont');?>
+    </div>
+
     <!-- news -->
-    <div class="news">
+    <!-- <div class="news">
         <a name="news"></a>
         <?php getcatvar('page','id = 108','cont');?>
+    </div> -->
+
+    <div class="case clearfix">
+        <div class="container">
+            <div class="row">
+                <h3>  CASE</h3>
+                <div class="col-lg-6 imgs"><img src="__PUBLIC__/www/images/case.png" alt=""></div>
+                <div class="col-lg-6 txt">
+
+                    <p>In 2018, Yaolong flagpole supplier is honored to be one of the infrastructure construction
+                        suppliers of
+                        Abu Dhabi International Airport. We mainly provide stainless steel tapered light poles,
+                        stainless steel
+                        support rods, stainless steel bollard and stainless steel flagpole for Abu Dhabi International
+                        Airport.
+                    </p>
+                    <p>
+                        In addition, the Abu Dhabi International Airport project team also ordered a large number of
+                        support
+                        rods from Yaolong, Smart light poles are also one of the products we are currently researching.
+                    </p>
+                    <a href="https://www.yaolongpole.com/Abu-Dhabi-New-International-Airport-pole.html" target="_blank">
+                        Know More</a>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -153,21 +180,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </script>
 
     </div>
-
-   
  <div class="index">
      <!-- contact -->
      <div class="contact">
          <a name="contact"></a>
          <h3>contact us</h3>
          <div class="lines"></div>
+         <h6>Two steps to getting free consultant</h6>
          <div class="container">
              <div class="row">
 
                  <div class="list">
-                     <div class="title"> Select Product <span> * </span> </div>
+                     <div class="title"> ①Select Product <span> * </span> </div>
                      <div class="box clearfix selectproduct">
-                         <!--<?php getcatvar('page','id = 78','cont');?>-->
+
                          <?php  $_result=M("slide_data")->field("*")->where("fid = 3 AND status=1 ")->order("id desc")->limit("10")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="box-img" title="<?php echo ($r["title"]); ?>" onclick="checkedf(this);" check="0">
                                  <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>">
                              </div><?php endforeach; endif;?>
@@ -209,6 +235,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                          }
                      </script>
                  </div>
+
+                 <div class="step2"> ②Fill & submit the form</div>
 
                  <div class="form-box clearfix">
 
@@ -306,6 +334,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          <i class="topIcon"></i>
          <p>TOP</p>
      </div>
+     <a href="#contact" class="footer-contact">Contact us</a>
  </footer>
 
  </body>
