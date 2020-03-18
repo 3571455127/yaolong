@@ -99,7 +99,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <ul class="clearfix">
                                 <li class="nav-active"><a href="/index.php">HOME</a></li>
                                 <li><a href="#products">PRODUCT</a></li>
-                                <li><a href="#news">NEWS</a></li>
+                                <li><a href="#news">CASE</a></li>
                                 <li><a href="#about">About us</a></li>
                                 <li><a href="#contact">Contact us</a></li>
                             </ul>
@@ -126,53 +126,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- product -->
     <div class="product">
-        <a name="products"></a>
+        <div id="products"></div>
         <?php getcatvar('page','id = 73','cont');?>
     </div>
 
     <!-- odds -->
     <div class="odds">
-        <a name="odds"></a>
+        <div id="odds"></div>
         <?php getcatvar('page','id = 77','cont');?>
     </div>
 
     <!-- news -->
-    <!-- <div class="news">
-        <a name="news"></a>
+    <div class="news">
+        <div id="news"></div>
         <?php getcatvar('page','id = 108','cont');?>
-    </div> -->
-
-    <div class="case clearfix">
-        <div class="container">
-            <div class="row">
-                <h3>  CASE</h3>
-                <div class="col-lg-6 imgs"><img src="__PUBLIC__/www/images/case.png" alt=""></div>
-                <div class="col-lg-6 txt">
-
-                    <p>In 2018, Yaolong flagpole supplier is honored to be one of the infrastructure construction
-                        suppliers of
-                        Abu Dhabi International Airport. We mainly provide stainless steel tapered light poles,
-                        stainless steel
-                        support rods, stainless steel bollard and stainless steel flagpole for Abu Dhabi International
-                        Airport.
-                    </p>
-                    <p>
-                        In addition, the Abu Dhabi International Airport project team also ordered a large number of
-                        support
-                        rods from Yaolong, Smart light poles are also one of the products we are currently researching.
-                    </p>
-                    <a href="https://www.yaolongpole.com/Abu-Dhabi-New-International-Airport-pole.html" target="_blank">
-                        Know More</a>
-                </div>
-            </div>
-        </div>
-
+        
     </div>
-
 
     <!-- about -->
     <div class="about">
-        <a name="about"></a>
+        <div id="about"></div>
         <?php getcatvar('page','id = 74','cont');?>
 
         <script>
@@ -180,6 +153,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </script>
 
     </div>
+
+    <script>
+        $('.top-nav a').click(function () {
+            // alter(123)
+            console.log(45)
+            //根据a标签的href转换为id选择器，获取id元素所处的位置，并高度减50px（这里根据需要自由设置）
+            $('html,body').animate({
+                scrollTop: ($($(this).attr('href')).offset().top - 50)
+            }, 1500);
+        });
+    </script>
  <div class="index">
      <!-- contact -->
      <div class="contact">

@@ -916,3 +916,7 @@ footer .footer-contact {
     right: 0;
     z-index: 9999;
 }
+
+header .top-nav .list li a:hover{
+    color:#1f1155;
+}

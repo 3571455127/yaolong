@@ -21,19 +21,30 @@
     <script type="text/javascript" src="__PUBLIC__/wap/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/www/js/viewer.min.js"></script>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MJRNG84');</script>
-<!-- End Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MJRNG84');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJRNG84"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJRNG84" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- header -->
     <header>
         <!-- <div class="top-bar">
@@ -57,7 +68,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="nav-ul">
                     <a href="/index.php">HOME</a>
                     <a href="#product">PRODUCT</a>
-                    <a href="#news">NEWS</a>
+                    <a href="#news">CASE</a>
                     <a href="#about">About us</a>
                     <a href="#contact">Contact us</a>
                 </div>
@@ -77,6 +88,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </div>
 
+    <!-- product -->
+    <div class="product">
+        <a name="product"></a>
+        <?php getcatvar('page','id = 73','pcont');?>
+    </div>
 
     <!-- odds -->
     <div class="odds">
@@ -84,17 +100,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <?php getcatvar('page','id = 77','pcont');?>
     </div>
 
-    <!-- product -->
-    <div class="product">
-        <a name="product"></a>
-        <?php getcatvar('page','id = 73','pcont');?>
-    </div>
+
 
     <!-- news -->
     <div class="news">
         <a name="news"></a>
         <?php getcatvar('page','id = 108','pcont');?>
+       
     </div>
+
+
+
 
     <!-- about -->
     <div class="about">
@@ -104,8 +120,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             $('.example-box').viewer();
         </script>
     </div>
-
-   
  <div class="index">
      <!-- contact -->
      <div class="contact">
@@ -246,6 +260,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          <i class="topIcon"></i>
          <p>TOP</p>
      </div>
+
+     <a href="#contact" class="footer-contact"
+         style="position:fixed;bottom:10rem;right: 0;color:#fff;background-color: #1f1155;padding: 10px;border-radius: 8px;">Contact
+         us</a>
  </footer>
 
  </body>
