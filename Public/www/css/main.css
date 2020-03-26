@@ -209,6 +209,7 @@ header .top-nav .list li a {
     line-height: 106px;
     padding: 20px;
     text-transform: uppercase;
+    font-weight: 600;
 }
 
 header .top-nav .list,
