@@ -220,7 +220,7 @@ header .top-bar span {
 }
 
 .index .odds .box {
-    background-color: #b4b4b4;
+    background-color: #c4c4c4;
     padding: 20px 0;
     margin: 20px 0;
     text-align: center
@@ -234,17 +234,17 @@ header .top-bar span {
     text-transform: uppercase
 }
 
-.index .odds .box .ico .box-img {
+/* .index .odds .box .ico .box-img {
     height: 40px;
     line-height: 40px
-}
+} */
 
 /* .index .odds .box .ico:nth-child(5) img {
     width: 26%
 } */
 
 .index .odds .box img {
-    width: 15%
+    width: 25%
 }
 
 .index .product .list {
@@ -252,7 +252,9 @@ header .top-bar span {
 }
 
 .index .product .list .txt {
-    padding-bottom: 30px
+    /* padding-bottom: 30px; */
+    background-color: #fff;
+    padding: 0 0 30px 15px;
 }
 
 .index .product .list .title {
@@ -368,7 +370,20 @@ header .top-bar span {
 }
 
 .index .about .content .list .imgs .images img {
-    min-height: 145px
+    /* min-height: 145px */
+}
+
+.index .about .content .list .imgs .images:nth-child(3) img {
+    width: 60px;
+}
+
+.index .about .content .list .imgs .images:nth-child(2) img {
+    width: 70px;
+    text-align: center;
+}
+
+.index .about .content .list .imgs .images:nth-child(2) img {
+    padding-top: 10px;
 }
 
 .index .swiper-pagination-bullet-active {
@@ -636,8 +651,16 @@ header .menu .nav-ul a {
 
 .index .product {
     padding: 10px 0;
+    background-color: #f0f0f0;
 }
 
 .footer-contact {
     z-index: 999;
+}
+
+.index .news .txt .case-btns {
+    color: #fff;
+    background-color: #1f1155;
+    padding: 5px 10px;
+    border-radius: 8px;
 }
