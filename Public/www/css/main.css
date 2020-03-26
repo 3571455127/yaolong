@@ -121,7 +121,7 @@ body {
     overflow-x: hidden;
     color: #333;
     -webkit-font-smoothing: antialiased;
-    font-family: "Roboto" !important;
+    /* font-family: "Roboto" !important; */
     letter-spacing: 1px
 }
 
@@ -135,13 +135,15 @@ body {
 }
 
 header .top-bar {
-    height: 60px;
+    height: 50px;
     font-size: 16px;
-    color: #524f3f
+    color: #524f3f;
+    font-family: "Gadugi";
+
 }
 
 header .top-bar .infos {
-    line-height: 60px;
+    line-height: 50px;
     padding-left: 0
 }
 
@@ -202,11 +204,11 @@ header .top-nav .list li {
 }
 
 header .top-nav .list li a {
-    font-size: 22px;
+    font-size: 20px;
     color: #706f74;
     line-height: 106px;
     padding: 20px;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 header .top-nav .list,
@@ -253,9 +255,10 @@ header .top-nav .list .nav-active a {
     text-align: center;
     color: #1f1155;
     text-transform: uppercase;
-    font-size: 42px;
+    font-size: 32px;
     font-weight: 1000;
-    position: relative
+    font-family: "Verdana";
+    position: relative;
 }
 
 .index .odds h3::before,
@@ -281,21 +284,22 @@ header .top-nav .list .nav-active a {
     transform: translateX(-50%)
 }
 
+.index .odds {
+    padding: 50px 0;
+}
+
 .index .odds .box {
-    background-color: #b4b4b4
+    background-color: #c4c4c4;
 }
 
 .index .odds .box .list {
     padding: 50px 0
 }
 
-.index .odds .box .list .box-img {
-    min-height: 142px
-}
 
 .index .odds .box .list .ico {
-    padding-bottom: 35px;
-    min-height: 270px
+    padding-bottom: 30px;
+
 }
 
 .index .odds .box .list .ico:nth-child(4) p {
@@ -313,7 +317,7 @@ header .top-nav .list .nav-active a {
 .index .odds .box .list p {
     width: 200px;
     margin: 0 auto;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
     line-height: 1.4;
     color: #fff;
@@ -322,7 +326,8 @@ header .top-nav .list .nav-active a {
 }
 
 .index .product {
-    margin: 36px 0;
+    padding: 50px 0;
+    background-color: #f0f0f0;
 }
 
 .index .product .list .imgs,
@@ -342,26 +347,75 @@ header .top-nav .list .nav-active a {
 
 .index .product .list .txt .title {
     width: 100%;
-    font-size: 24px;
-    color: #1f1155;
+    font-size: 20px;
+    color: #201156;
     line-height: 1.4;
     padding-bottom: 30px;
     align-items: center;
     justify-content: center;
-    font-weight: bold
+    /* font-weight: bold; */
+    font-family: Verdana;
 }
+
+.index .product .list .txt .content {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
 
 .index .product .list .txt {
     font-size: 20px;
     line-height: 1.4;
     color: #727275;
-    word-wrap: break-word
+    word-wrap: break-word;
+    background-color: #fff;
 }
 
-.index .news {
+.index .product .pro-btn {
+    text-align: center;
+    display: block;
+    margin: 5% auto;
+    margin-bottom: 0;
+    width: 230px;
+    height: 45px;
+    line-height: 45px;
+    color: #201156;
+    font-weight: 600;
+    font-size: 20px;
+    border: 1px solid #201156;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.index .product .pro-btn:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: #201156;
+}
+
+
+/*.index .news {
     padding: 50px 0 10px 0;
-    /* border-top: 10px solid #c5c4ca; */
-    border-bottom: 10px solid #c5c4ca
+     border-top: 10px solid #c5c4ca; 
+border-bottom: 10px solid #c5c4ca 
+}*/
+
+.index .about .about-btn {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    width: 136px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    margin-top: 28px;
+}
+
+.index .about .about-btn:hover {
+    background-color: #201156;
+    border: 1px solid #201156;
 }
 
 .index .news .box {
@@ -461,7 +515,7 @@ header .top-nav .list .nav-active a {
     font-size: 20px;
     line-height: 1.4;
     font-weight: 600;
-    padding: 30px 0
+    padding-bottom: 30px;
 }
 
 .index .about .content .top .txt p {
@@ -504,6 +558,7 @@ header .top-nav .list .nav-active a {
 }
 
 .index .contact .lines {
+    display: none;
     width: 100%;
     height: 1px;
     background-color: #000
@@ -512,7 +567,7 @@ header .top-nav .list .nav-active a {
 .index .contact .list .title,
 .index .contact .step2 {
     font-size: 20px;
-    color: #98979c;
+    color: #777;
     text-align: left;
     text-transform: capitalize;
     padding: 10px 0;
@@ -554,7 +609,7 @@ header .top-nav .list .nav-active a {
 
 .index .contact form .box {
     font-size: 16px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     text-align: left
 }
 
@@ -564,16 +619,17 @@ header .top-nav .list .nav-active a {
 
 .index .contact form .box p {
     font-weight: 500;
-    padding-bottom: 5px
+    padding-bottom: 5px;
+    color: #98979c;
 }
 
 .index .contact form .box input {
-    width: 90%;
+    width: 100%;
     height: 34px;
     line-height: 34px;
     border: 0;
-    border: 1px solid #a3a49f;
-    background-color: #f1f0f0;
+    border: 1px solid #cacaca;
+    background-color: #fcfcfc;
     padding-left: 15px
 }
 
@@ -583,26 +639,24 @@ header .top-nav .list .nav-active a {
 }
 
 .index .contact form .box textarea {
-    width: 90%;
+    width: 100%;
     height: 180px;
     border: 0;
-    border: 1px solid #a3a49f;
-    background-color: #f1f0f0;
+    border: 1px solid #cacaca;
+    background-color: #fcfcfc;
     padding-left: 15px
 }
 
 .index .contact form .submit-btn {
-    width: 192px;
-    height: 52px;
-    border: 0;
-    border-radius: 8px;
-    line-height: 52px;
-    text-align: center;
-    color: #fff;
-    background-color: #1f1155;
-    font-weight: 600;
-    font-size: 24px;
-    margin-left: 345px
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    font-size: 18px;
+    color: #201156;
+    border: 1px solid rgba(32, 17, 86, 1);
+    border-radius: 6px;
+    margin-left: 476px;
 }
 
 .index .contact .details .boxs .boxs-img {
@@ -610,24 +664,29 @@ header .top-nav .list .nav-active a {
 }
 
 .index .contact .details .boxs {
-    padding-bottom: 11%
+    padding-bottom: 5%
 }
 
 .index .contact .details .boxs-txt {
     line-height: 1.4;
-    font-size: 24px;
-    color: #737277
+    font-size: 18px;
+    color: #777;
+    padding-left: 0;
 }
 
 .index .contact .details .boxs:last-child {
     padding-bottom: 0
 }
 
+.index .contact h3 {
+    margin-bottom: 40px;
+}
+
 .index .contact h6 {
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.4;
-    padding: 25px 0 20px 0;
+    /* padding: 25px 0 20px 0; */
 }
 
 footer .info {
@@ -654,7 +713,7 @@ footer .copy {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
     background-color: #1f1155
 }
@@ -721,6 +780,19 @@ header .infos a {
         height: 500px
     }
 
+    .index .product {
+        padding-bottom: 20px;
+    }
+
+    .index .odds .box .list p {
+        padding: 10px 0;
+        font-size: 18px;
+    }
+
+    .index .product .pro-btn {
+        margin: 3% auto;
+    }
+
     .index .swiper-wrapper swiper-wrapper {
         width: 100%
     }
@@ -766,8 +838,8 @@ header .infos a {
     }
 
     .index .odds .box .list .ico {
-        padding-bottom: 0;
-        min-height: 200px
+        padding-bottom: 10px;
+
     }
 
     .index .odds .box .list {
@@ -811,12 +883,13 @@ header .infos a {
         height: 40px;
         line-height: 40px;
         font-size: 18px;
-        margin-left: 435px
+        margin-left: 552px
     }
 
     footer .copy {
         font-size: 20px
     }
+
 }
 
 header .top-nav .list {
@@ -901,8 +974,15 @@ header .top-nav .list {
     border-radius: 8px;
 }
 
+.case .txt a:hover {
+    color: #1f1155 !important;
+    background-color: #fff !important;
+    border: 1px solid #1f1155;
+}
+
 footer .footer-contact {
-    display: block;
+    /* display: block; */
+    display: none;
     width: 150px;
     text-align: center;
     font-size: 18px;
@@ -917,6 +997,34 @@ footer .footer-contact {
     z-index: 9999;
 }
 
-header .top-nav .list li a:hover{
-    color:#1f1155;
+header .top-nav .list li a:hover {
+    color: #1f1155;
+}
+
+.index .about .list .example {
+    padding: 30px 0;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.index .about .list .example-box .images:nth-child(1) img {
+    width: 352px;
+    height: 120px;
+    margin-left: 40px;
+}
+
+.index .about .list .example-box .images:nth-child(2) img {
+    width: 143px;
+    height: 120px;
+    margin-left: 70px;
+}
+
+
+.index .about .list .example-box .images:nth-child(3) img {
+    width: 120px;
+    height: 120px;
+}
+
+.index .contact form .submit-btn:hover {
+    background-color: #1f1155;
+    color: #fff;
 }

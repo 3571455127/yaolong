@@ -24,12 +24,12 @@
     <link rel="stylesheet" href="__PUBLIC__/www/css/main.css">
 
     <!-- 字体引入 -->
-    <style>
+    <!-- <style>
         @font-face {
             font-family: 'Roboto';
             src: url('__PUBLIC__/www/font/Roboto.ttf');
         }
-    </style>
+    </style> -->
 
     <script type="text/javascript" src="__PUBLIC__/www/js/jquery.min.js"></script>
     <script type="text/javascript" src="__PUBLIC__/www/js/viewer.min.js"></script>
@@ -170,6 +170,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          <a name="contact"></a>
          <h3>contact us</h3>
          <div class="lines"></div>
+         <h6>Get Free Samples Now</h6>
          <h6>Two steps to getting free consultant</h6>
          <div class="container">
              <div class="row">
@@ -226,7 +227,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                      <form class="col-lg-7 col-md-7" name="form" method="post" onsubmit="return beforeSubmit2(this);"
                          action="index.php?g=Home&a=message">
-                         <div class="clearfix" style="padding-bottom:20px">
+                         <div class="clearfix" style="padding-bottom:10px">
                              <input name="forward" type="hidden"
                                  value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>" />
                              <input type="hidden" name="product" id="product" value="" />
