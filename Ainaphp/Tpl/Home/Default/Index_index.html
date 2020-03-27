@@ -3,7 +3,7 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n">
-                <div class="swiper-slide"><a href="{$r.link}" title="{$r.title}" target="_blank"><img src="{$r.pic}"
+                <div class="swiper-slide"><a href="#products" title="{$r.title}"><img src="{$r.pic}"
                             alt="{$r.title}"></a></div>
             </YP:list>
         </div>
@@ -13,27 +13,29 @@
     </div>
 
     <!-- product -->
+    <div id="products"></div>
     <div class="product">
-        <div id="products"></div>
+
         <?php getcatvar('page','id = 73','cont');?>
     </div>
 
     <!-- odds -->
+    <div id="odds"></div>
     <div class="odds">
-        <div id="odds"></div>
+
         <?php getcatvar('page','id = 77','cont');?>
     </div>
 
     <!-- news -->
+    <div id="news"></div>
     <div class="news">
-        <div id="news"></div>
         <?php getcatvar('page','id = 108','cont');?>
-        
+
     </div>
 
     <!-- about -->
+    <div id="about"></div>
     <div class="about">
-        <div id="about"></div>
         <?php getcatvar('page','id = 74','cont');?>
 
         <script>
@@ -41,4 +43,3 @@
         </script>
 
     </div>
-

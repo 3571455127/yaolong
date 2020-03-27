@@ -116,7 +116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Swiper -->
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide"><a href="<?php echo ($r["link"]); ?>" title="<?php echo ($r["title"]); ?>" target="_blank"><img src="<?php echo ($r["pic"]); ?>"
+            <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide"><a href="#products" title="<?php echo ($r["title"]); ?>"><img src="<?php echo ($r["pic"]); ?>"
                             alt="<?php echo ($r["title"]); ?>"></a></div><?php endforeach; endif;?>
         </div>
         <div class="swiper-pagination"></div>
@@ -125,27 +125,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <!-- product -->
+    <div id="products"></div>
     <div class="product">
-        <div id="products"></div>
+
         <?php getcatvar('page','id = 73','cont');?>
     </div>
 
     <!-- odds -->
+    <div id="odds"></div>
     <div class="odds">
-        <div id="odds"></div>
+
         <?php getcatvar('page','id = 77','cont');?>
     </div>
 
     <!-- news -->
+    <div id="news"></div>
     <div class="news">
-        <div id="news"></div>
         <?php getcatvar('page','id = 108','cont');?>
-        
+
     </div>
 
     <!-- about -->
+    <div id="about"></div>
     <div class="about">
-        <div id="about"></div>
         <?php getcatvar('page','id = 74','cont');?>
 
         <script>
@@ -153,17 +155,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </script>
 
     </div>
-
-    <script>
-        $('.top-nav a').click(function () {
-            // alter(123)
-            console.log(45)
-            //根据a标签的href转换为id选择器，获取id元素所处的位置，并高度减50px（这里根据需要自由设置）
-            $('html,body').animate({
-                scrollTop: ($($(this).attr('href')).offset().top - 50)
-            }, 1500);
-        });
-    </script>
  <div class="index">
      <!-- contact -->
      <div class="contact">
