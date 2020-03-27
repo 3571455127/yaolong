@@ -167,7 +167,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
              <div class="row">
 
                  <div class="list">
-                     <div class="title"> ①Select Product <span> * </span> </div>
+                     <div class="title"> ①Select Product  </div>
                      <div class="box clearfix selectproduct">
 
                          <?php  $_result=M("slide_data")->field("*")->where("fid = 3 AND status=1 ")->order("id desc")->limit("10")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="box-img" title="<?php echo ($r["title"]); ?>" onclick="checkedf(this);" check="0">

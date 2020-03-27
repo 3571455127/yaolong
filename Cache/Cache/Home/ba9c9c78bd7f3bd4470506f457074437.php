@@ -127,7 +127,7 @@
          <h3>contact us</h3>
 
          <div class="list">
-             <div class="title"> Select Product <span> * </span> </div>
+             <div class="title"> Select Product  </div>
              <div class="box">
                  <div class="swiper-container">
                      <div class="swiper-wrapper">

@@ -178,11 +178,12 @@ header .top-bar span {
 
 .logo a {
     display: block;
-    padding: 20px
+    padding: 7px
 }
 
 .logo a img {
-    width: 60%
+    width: 40%;
+    margin-left: 45px;
 }
 
 .logo a img,
@@ -251,11 +252,21 @@ header .top-bar span {
     padding: 30px 5%
 }
 
+.index .product .list .imgs {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.index .product .list img {
+    width: 80%;
+}
+
 .index .product .list .txt {
     /* padding-bottom: 30px; */
     background-color: #fff;
     padding: 0 15px 30px 15px;
     word-wrap: break-word;
+    margin: 0 45px;
 }
 
 .index .product .list .title {
@@ -584,8 +595,8 @@ header .top {
 
 header .menu {
     position: absolute;
-    top: 35px;
-    right: 20px;
+    top: 18px;
+    right: 50px;
     z-index: 9999
 }
 
@@ -656,6 +667,7 @@ header .menu .nav-ul a {
 }
 
 .footer-contact {
+    display: none;
     z-index: 999;
 }
 
