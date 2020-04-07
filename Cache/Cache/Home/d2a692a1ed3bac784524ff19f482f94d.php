@@ -106,17 +106,16 @@
         <div class="pc-swiper">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 ); endforeach; endif;?>
-                    <div class="swiper-slide">
+                    <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide">
                         <a href="#products" title="<?php echo ($r["title"]); ?>" class="banner-a">
                             <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>">
                         </a>
-                    </div>
-                    </YP:list>
+                    </div><?php endforeach; endif;?>
                 </div>
                 <div class="container">
                     <div class="row">
-                        <form method="post" onsubmit="return beforeSubmit3(this);">
+                        <form method="post" action="index.php?g=Home&a=message" onsubmit="return beforeSubmit3(this);">
+            <input name="forward" type="hidden" value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>"/>
                             <h6>Contact Us</h6>
                             <div class="list">
                                 <div class="box">
