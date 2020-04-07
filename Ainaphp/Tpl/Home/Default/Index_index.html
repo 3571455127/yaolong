@@ -7,7 +7,7 @@
         <div class="pc-swiper">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n"></YP:list>
+                    <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n">
                     <div class="swiper-slide">
                         <a href="#products" title="{$r.title}" class="banner-a">
                             <img src="{$r.pic}" alt="{$r.title}">
@@ -17,7 +17,8 @@
                 </div>
                 <div class="container">
                     <div class="row">
-                        <form method="post" onsubmit="return beforeSubmit3(this);">
+                        <form method="post" action="index.php?g=Home&a=message" onsubmit="return beforeSubmit3(this);">
+            <input name="forward" type="hidden" value="{$_SERVER['SERVER_NAME']}{if $catid}/index.php?m={$Categorys[$catid]['module']}&a=index&id={$catid}{else}/index.php{/if}"/>
                             <h6>Contact Us</h6>
                             <div class="list">
                                 <div class="box">
