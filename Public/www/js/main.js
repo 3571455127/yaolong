@@ -2,7 +2,7 @@ $(function () {
     // banner   
     var mySwiper = new Swiper('.banner .swiper-container', {
         loop: true,
-        // autoplay: true,
+        autoplay: true,
         speed: 1200,
         pagination: {
             el: '.banner .swiper-pagination',
@@ -27,7 +27,7 @@ $(function () {
     if (windowWidth < 768) {
         var mySwiper = new Swiper('.contact .swiper-container', {
             loop: true,
-            // autoplay: true,
+            autoplay: true,
             slidesPerView: 2,
             spaceBetween: 20,
             speed: 1200,
