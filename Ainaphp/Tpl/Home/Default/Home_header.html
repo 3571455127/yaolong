@@ -19,96 +19,81 @@
 
     <!-- css -->
     <link rel="stylesheet" href="__PUBLIC__/www/css/bootstrap.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/www/css/swiper-4.5.0.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/www/css/viewer.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/www/css/swiper.min.css">
     <link rel="stylesheet" href="__PUBLIC__/www/css/main.css">
-
-    <!-- 字体引入 -->
-    <!-- <style>
-        @font-face {
-            font-family: 'Roboto';
-            src: url('__PUBLIC__/www/font/Roboto.ttf');
-        }
-    </style> -->
-
+    <!-- js -->
     <script type="text/javascript" src="__PUBLIC__/www/js/jquery.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/www/js/viewer.min.js"></script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MJRNG84');</script>
-<!-- End Google Tag Manager -->
-<script>
-     function IsPC() {
-          var userAgentInfo = navigator.userAgent;
-          var Agents = ["Android", "iPhone",
-                      "SymbianOS", "Windows Phone",
-                      "iPad", "iPod"];
-          var flag = true;
-          for (var v = 0; v < Agents.length; v++) {
-              if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                  flag = false;
-                 break;
-             }
-         }
-         return flag;
-      }
-      var isp = IsPC();
-      if(!isp){
-            window.location.href="/mobile.php";
-      }
-</script>
+    <script type="text/javascript" src="__PUBLIC__/www/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/www/js/swiper.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/www/js/main.js"></script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MJRNG84');
+    </script>
+    <!-- End Google Tag Manager -->
+
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar-example">
     <!-- header -->
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJRNG84"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJRNG84" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
     <header>
-        <div class="container">
-            <div class="row">
-
-                <div class="top-bar clearfix">
-                    <div class="infos">
-                        <div class="phone pull-left">
-                            <img src="__PUBLIC__/www/images/phone.png" alt="">
-                            <span>Tel:{$phone}</span>
-                        </div>
-                        <div class="email pull-left">
-                            <img src="__PUBLIC__/www/images/email.png" alt="">
-                            <a href="mailto:{$email}" target="_blank"
-                                style="color:#524F3F"><span>Email:{$email}</span></a></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="top-nav clearfix">
+        <div class="top-bar clearfix">
             <div class="container">
                 <div class="row">
-                    <div class="clearfix">
-                        <div class="logo col-lg-4 col-md-4 col-sm-4">
-                            <a href="/index.php"><img src="/Public/www/images/logo.png" alt=""></a>
-                        </div>
-                        <div class="list col-lg-8 col-md-8 col-sm-8">
-                            <ul class="clearfix">
-                                <li class="nav-active"><a href="/index.php">HOME</a></li>
-                                <li><a href="#products">PRODUCT</a></li>
-                                <li><a href="#news">CASE</a></li>
-                                <li><a href="#about">About us</a></li>
-                                <li><a href="#contact">Contact us</a></li>
-                            </ul>
-                        </div>
+                    <div class="phone col-lg-3 col-md-3 col-sm-3"><span>Tel: {$phone}</span></div>
+                    <div class="eamil col-lg-3 col-md-3 col-sm-3">
+                        <a href="mailto:{$email}" target="_blank" class="emails">
+                            <span>Email: {$email}</span></a>
                     </div>
-
                 </div>
             </div>
-
         </div>
+
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index.php"><img alt="logo" src="/Public/www/images/logo.png"></a>
+                </div>
+
+                <div id="navbar-example">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#home">HOME</a></li>
+                            <li><a href="#product">PRODUCT</a></li>
+                            <li><a href="#case">CASE</a></li>
+                            <li><a href="#about">About us</a></li>
+                            <li><a href="#contact">Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
 
     </header>

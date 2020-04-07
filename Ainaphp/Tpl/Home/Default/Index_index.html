@@ -1,45 +1,402 @@
 <div class="index">
-    <!-- Swiper -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n">
-                <div class="swiper-slide"><a href="#products" title="{$r.title}"><img src="{$r.pic}"
-                            alt="{$r.title}"></a></div>
-            </YP:list>
+
+    <!-- banner -->
+    <div class="banner" id="home">
+
+        <!-- pc -->
+        <div class="pc-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 1" key="n"></YP:list>
+                    <div class="swiper-slide">
+                        <a href="#products" title="{$r.title}" class="banner-a">
+                            <img src="{$r.pic}" alt="{$r.title}">
+                        </a>
+                    </div>
+                    </YP:list>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <form method="post" onsubmit="return beforeSubmit3(this);">
+                            <h6>Contact Us</h6>
+                            <div class="list">
+                                <div class="box">
+                                    <p>Name <span> *</span></p>
+                                    <input type="text" name="name">
+                                </div>
+                                <div class="box">
+                                    <p>E-mail <span> *</span></p>
+                                    <input type="text" name="email">
+                                </div>
+                                <div class="box">
+                                    <p>Company Name <span> *</span></p>
+                                    <input type="text" name="company">
+                                </div>
+                                <div class="box">
+                                    <p>Amount </p>
+                                    <input type="text">
+                                </div>
+                                <div class="box">
+                                    <p>Message </p>
+                                    <textarea></textarea>
+                                </div>
+                            </div>
+                            <div style="text-align: center;">
+                                <input type="submit" value="Send" class="banner-sub">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+
+        <!-- wap -->
+        <div class="wap-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <YP:list name="slide_data" id="r" limit="5" field="*" where="fid = 2" key="n">
+                        <div class="swiper-slide"><a href="{$r.link}" title="{$r.title}" target="_blank"><img
+                                    src="{$r.pic}" alt="{$r.title}"></a></div>
+                    </YP:list>
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+        </div>
     </div>
 
     <!-- product -->
-    <div id="products"></div>
-    <div class="product">
+    <div id="product">
+        <div class="product">
+            <!-- pc -->
+            <div class="pc-product">
+                <?php getcatvar('page','id = 73','cont');?>
+            </div>
 
-        <?php getcatvar('page','id = 73','cont');?>
+            <!-- wap -->
+            <div class="wap-product">
+                <?php getcatvar('page','id = 73','pcont');?>
+            </div>
+        </div>
+
     </div>
 
-    <!-- odds -->
-    <div id="odds"></div>
-    <div class="odds">
-
+    <!-- choose -->
+    <div class="choose">
         <?php getcatvar('page','id = 77','cont');?>
     </div>
 
-    <!-- news -->
-    <div id="news"></div>
-    <div class="news">
-        <?php getcatvar('page','id = 108','cont');?>
-
+    <!-- case -->
+    <div id="case">
+        <div class="case">
+            <?php getcatvar('page','id = 108','cont');?>
+        </div>
     </div>
 
     <!-- about -->
-    <div id="about"></div>
-    <div class="about">
-        <?php getcatvar('page','id = 74','cont');?>
-
-        <script>
-            $('.example-box').viewer();
-        </script>
-
+    <div id="about">
+        <div class="about">
+            <?php getcatvar('page','id = 74','cont');?>
+        </div>
     </div>
+
+    <!-- contact -->
+    <div id="contact">
+        <div class="contact">
+            <!-- pc -->
+            <div class="pc-contact">
+                <h3>contact us</h3>
+                <h6>Get Free Samples Now</h6>
+                <h6>Two steps to getting free consultant</h6>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="list">
+                            <div class="title"> ①Select Product </div>
+                            <div class="box clearfix selectproduct">
+
+                                <YP:list name="slide_data" id="r" limit="10" field="*" where="fid = 3" key="n">
+                                    <div class="box-img" title="{$r.title}" onclick="checkedf(this);" check="0">
+                                        <img src="{$r.pic}" alt="{$r.title}">
+                                    </div>
+                                </YP:list>
+
+                            </div>
+                            <style>
+                                .redborder img {
+                                    border: 2px solid red;
+                                }
+                            </style>
+                            <script>
+                                //    alert(1);
+                                function checkedf(obj) {
+                                    var check = parseInt($(obj).attr('check'));
+                                    //    alert(check);
+                                    if (check) {
+                                        $(obj).attr('check', 0);
+                                        $(obj).removeClass('redborder');
+                                    } else {
+                                        $(obj).attr('check', 1);
+                                        $(obj).addClass('redborder');
+                                    }
+                                    sproduct();
+                                }
+
+                                function sproduct() {
+                                    var producttitle = '';
+                                    $('.selectproduct').find('div').each(function () {
+                                        var check = parseInt($(this).attr('check'));
+                                        if (check) {
+                                            //            alert($(this).attr('title'));
+                                            producttitle += $(this).attr('title') + ';';
+                                        }
+                                        $('#product').val(producttitle);
+                                    })
+                                }
+                            </script>
+                        </div>
+
+                        <div class="step2"> ②Fill &amp; submit the form</div>
+
+                        <div class="form-box clearfix">
+
+                            <form class="col-lg-7 col-md-7" name="form" method="post"
+                                onsubmit="return beforeSubmit2(this);" action="index.php?g=Home&a=message">
+                                <div class="clearfix" style="padding-bottom:10px">
+                                    <input name="forward" type="hidden"
+                                        value="{$_SERVER['SERVER_NAME']}{if $catid}/index.php?m={$Categorys[$catid]['module']}&a=index&id={$catid}{else}/index.php{/if}" />
+                                    <input type="hidden" name="product" id="product" value="" />
+                                    <div class="box clearfix">
+                                        <div class="box-left col-lg-4 col-md-4">
+                                            <p>Name <span> *</span></p>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8"> <input type="text" name="name"></div>
+                                    </div>
+                                    <div class="box clearfix">
+                                        <div class="box-left col-lg-4 col-md-4">
+                                            <p>Email <span>*</span></p>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8"> <input type="text" name="email"></div>
+                                    </div>
+                                    <div class="box clearfix">
+                                        <div class="box-left col-lg-4 col-md-4">
+                                            <p>Company name <span>*</span></p>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8"> <input type="text" name="com"></div>
+                                    </div>
+                                    <div class="box clearfix">
+                                        <div class="box-left col-lg-4 col-md-4">
+                                            <p>Amount </p>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8"> <input type="text" name="Amount"></div>
+                                    </div>
+                                    <div class="box clearfix">
+                                        <div class="box-left col-lg-4 col-md-4">
+                                            <p> Message</p>
+                                        </div>
+                                        <div class="col-lg-8 col-md-8"> <textarea name="message"></textarea></div>
+                                    </div>
+                                </div>
+                                <div class="box-btns"> <input type="submit" value="SUBMIT" class="submit-btn"></div>
+                            </form>
+                            <div class="details col-lg-5 col-md-7">
+                                <div class="boxs clearfix">
+                                    <div class="boxs-img col-lg-2 col-md-2"><img
+                                            src="/Public/www/images/ico-contact1.png" alt="">
+                                    </div>
+                                    <div class="boxs-txt col-lg-10 col-md-10">
+                                        {$address}
+                                    </div>
+                                </div>
+                                <div class="boxs clearfix">
+                                    <div class="boxs-img col-lg-2 col-md-2"><img
+                                            src="/Public/www/images/ico-contact2.png" alt="">
+                                    </div>
+                                    <div class="boxs-txt col-lg-10 col-md-10">
+                                        <a href="mailto:{$email}" target="_blank"
+                                            style="color:#737277">Email:{$email}</a>
+                                    </div>
+                                </div>
+                                <div class="boxs clearfix">
+                                    <div class="boxs-img col-lg-2 col-md-2"><img
+                                            src="/Public/www/images/ico-contact3.png" alt="">
+                                    </div>
+                                    <div class="boxs-txt col-lg-10 col-md-10">
+                                        Phone:{$phone}
+                                    </div>
+                                </div>
+                                <div class="boxs clearfix">
+                                    <div class="boxs-img col-lg-2 col-md-2"><img
+                                            src="/Public/www/images/ico-contact4.png" alt="">
+                                    </div>
+                                    <div class="boxs-txt col-lg-10 col-md-10">
+                                        Tel:{$Tel}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- wap -->
+            <div class="wap-contact">
+                <h3>contact us</h3>
+                <h6>Get Free Samples Now</h6>
+                <h6>Two steps to getting free consultant</h6>
+                <div class="container">
+                    <div class="row">
+
+                        <div class="list">
+                            <div class="title"> ①Select Product </div>
+                            <div class="box">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <!--<?php getcatvar('page','id = 78','pcont');?>-->
+                                        <YP:list name="slide_data" id="r" limit="10" field="*" where="fid = 3" key="n">
+                                            <div class="swiper-slide" title="{$r.title}" onclick="checkedf(this);"
+                                                check="0">
+                                                <img src="{$r.pic}" alt="{$r.title}">
+                                            </div>
+                                        </YP:list>
+
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <style>
+                                .redborder img {
+                                    border: 2px solid red;
+                                }
+                            </style>
+                            <script>
+                                //    alert(1);
+                                function checkedf(obj) {
+                                    var check = parseInt($(obj).attr('check'));
+                                    //    alert(check);
+                                    if (check) {
+                                        $(obj).attr('check', 0);
+                                        $(obj).removeClass('redborder');
+                                    } else {
+                                        $(obj).attr('check', 1);
+                                        $(obj).addClass('redborder');
+                                    }
+                                    sproduct();
+                                }
+
+                                function sproduct() {
+                                    var producttitle = '';
+                                    $('.selectproduct').find('div').each(function () {
+                                        var check = parseInt($(this).attr('check'));
+                                        if (check) {
+                                            //            alert($(this).attr('title'));
+                                            producttitle += $(this).attr('title') + ';';
+                                        }
+                                        $('#product').val(producttitle);
+                                    })
+                                }
+                            </script>
+                        </div>
+
+                        <div class="step2"> ②Fill &amp; submit the form</div>
+
+                        <div class="form-box clearfix">
+
+                            <form name="form" method="post" onsubmit="return beforeSubmit2(this);"
+                                action="index.php?g=Home&a=message">
+                                <input type="hidden" name="product" id="product" value="" />
+                                <div class="clearfix" style="padding-bottom:10px">
+
+                                    <div class="clearfix">
+                                        <div class="box col-xs-6">
+                                            <div class="box-left">
+                                                <p>Name <span> *</span></p>
+                                            </div>
+                                            <input type="text" name="name">
+                                        </div>
+                                        <div class="box col-xs-6">
+                                            <div class="box-left">
+                                                <p>Email <span>*</span></p>
+                                            </div>
+                                            <input type="text" name="email">
+                                        </div>
+                                        <div class="box col-xs-6">
+                                            <div class="box-left">
+                                                <p>Company name <span>*</span></p>
+                                            </div>
+                                            <input type="text" name="com">
+                                        </div>
+                                        <div class="box col-xs-6">
+                                            <div class="box-left">
+                                                <p>Amount </p>
+                                            </div>
+                                            <input type="text" name="Amount">
+                                        </div>
+                                    </div>
+                                    <div class="box ">
+                                        <div class="box-left">
+                                            <p> Message</p>
+                                        </div>
+                                        <textarea name="message"></textarea>
+                                    </div>
+                                </div>
+                                <div class="btns"> <input type="submit" value="SUBMIT"></div>
+                            </form>
+                            <div class="details">
+                                <div class="boxs clearfix">
+                                    <div class="boxs-img"><img src="/Public/www/images/ico-contact1.png" alt="">
+                                    </div>
+                                    <div class="boxs-txt">
+                                        {$address}
+                                    </div>
+                                </div>
+                                <div class="boxs clearfix">
+                                    <div class="boxs-img"><img src="/Public/www/images/ico-contact2.png" alt="">
+                                    </div>
+                                    <div class="boxs-txt">
+                                        <a class="emails" href="mailto:{$email}" target="_blank">
+                                            Email:{$email}
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="boxs clearfix">
+                                    <div class="boxs-img"><img src="/Public/www/images/ico-contact3.png" alt="">
+                                    </div>
+                                    <div class="boxs-txt">
+                                        Phone:{$phone}
+                                    </div>
+                                </div>
+                                <div class="boxs clearfix">
+                                    <div class="boxs-img"><img src="/Public/www/images/ico-contact4.png" alt="">
+                                    </div>
+                                    <div class="boxs-txt">
+                                        Tel:{$Tel}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="copy"> {$cop} </div>
+    <div class="goTop" style="display: block;">
+        <i class="topIcon"></i>
+        <p>TOP</p>
+    </div>
+
+
+</div>
+</body>
+
+</html>

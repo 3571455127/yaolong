@@ -73,14 +73,18 @@ define('UPDATETIME','20121225');
 
 if(!isMobile()){
 
-define('Ainaphp',true);	
-define('APP_NAME', 'Ainaphp');
-define('APP_PATH', './Ainaphp/');
-   }else{
-define('Mobile',true);
-define('APP_NAME', 'Mobile');
-define('APP_PATH', './Mobile/');  
-   }
+    define('Ainaphp',true);	
+    define('APP_NAME', 'Ainaphp');
+    define('APP_PATH', './Ainaphp/');
+       }else{
+    //define('Mobile',true);
+    //define('APP_NAME', 'Mobile');
+    //define('APP_PATH', './Mobile/');  
+    
+    define('Ainaphp',true);	
+    define('APP_NAME', 'Ainaphp');
+    define('APP_PATH', './Ainaphp/');
+       }
 	
 
 //echo APP_PATH;exit;

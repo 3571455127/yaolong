@@ -6,19 +6,7 @@
 
          <div class="list">
              <div class="title"> Select Product  </div>
-             <div class="box">
-                 <div class="swiper-container">
-                     <div class="swiper-wrapper">
-                         <!--<?php getcatvar('page','id = 78','pcont');?>-->
-                         <YP:list name="slide_data" id="r" limit="10" field="*" where="fid = 3" key="n">
-                             <div class="swiper-slide" title="{$r.title}" onclick="checkedf(this);" check="0">
-                                 <img src="{$r.pic}" alt="{$r.title}">
-                             </div>
-                         </YP:list>
-                     </div>
-                     <div class="swiper-pagination"></div>
-                 </div>
-             </div>
+            
          </div>
          <style>
              .redborder img {
