@@ -686,6 +686,10 @@ header .navbar .navbar-nav>li>a {
     padding-bottom: 0;
 }
 
+.index .pcbox-img {
+    display: block;
+}
+
 /* 响应式 */
 @media screen and (max-width:1920px) {
     .index .pc-swiper form {
@@ -1232,5 +1236,9 @@ header .navbar .navbar-nav>li>a {
 
     .index .wap-contact h6 {
         font-size: 14px;
+    }
+
+    .index .pcbox-img {
+        display: none;
     }
 }
