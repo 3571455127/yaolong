@@ -107,15 +107,16 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide">
-                        <a href="#products" title="<?php echo ($r["title"]); ?>" class="banner-a">
-                            <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>">
-                        </a>
-                    </div><?php endforeach; endif;?>
+                            <a href="#products" title="<?php echo ($r["title"]); ?>" class="banner-a">
+                                <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>">
+                            </a>
+                        </div><?php endforeach; endif;?>
                 </div>
                 <div class="container">
                     <div class="row">
                         <form method="post" action="index.php?g=Home&a=message" onsubmit="return beforeSubmit3(this);">
-            <input name="forward" type="hidden" value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>"/>
+                            <input name="forward" type="hidden"
+                                value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>" />
                             <h6>Contact Us</h6>
                             <div class="list">
                                 <div class="box">
@@ -195,7 +196,82 @@
     <!-- about -->
     <div id="about">
         <div class="about">
-            <?php getcatvar('page','id = 74','cont');?>
+            <!-- <?php getcatvar('page','id = 74','cont');?> -->
+            <h3>
+                about us
+            </h3>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="top clearfix">
+                            <div class="box-img col-lg-6 col-md-6">
+                                <div class="example">
+                                    <div class="example-box">
+                                        <img src="/Uploads/202003/5e7c541a51a8a.png" width="591" height="442" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="txt col-lg-6 col-md-6">
+                                <div class="contain" id="textcontain">
+                                    <div class="title">
+                                        Guangdong Yaolong Metals Technology Co., Ltd
+                                    </div>
+                                    <p>
+                                        Yaolong is established in 2004. The headquarter of the company is located in
+                                        Foshan
+                                        city,Guangdong province, China. We are a professional manufacturer engaged in
+                                        the
+                                        research, design, production and distribution of high-class stainless steel
+                                        bollards.Our
+                                        company has a complete series of advanced equipment from Germany, Japan, Italy
+                                        and
+                                        France, including 16meter long bending machine, plasma auto- welding machine,
+                                        12meter
+                                        laser cutting machine, polishing facility etc.We have a team of professional
+                                        designers,
+                                        engineers and skillful welders.We have passed the authentication of the ISO
+                                        9001:2000
+                                        International Quality Management System, the ISO14001 Environment Management
+                                        System, the
+                                        GB/T28001-2001 Occupational Health and Safety Management System.
+                                    </p>
+                                    <div class="open-btn" id="btncontain">
+                                        <a class="about-more">
+                                            <div class="box-img">
+                                                <img src="/Public/www/images/about-more.png" alt="" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <a class="about-btn" href="#contact"> Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="lines">
+                        </div>
+                        <div class="list">
+                            <h5>
+                                Certificate
+                            </h5>
+                            <!-- <div class="box-img">
+                                <img src="/Public/www/images/ico-about.png" alt="" />
+                            </div> -->
+                            <div class="list-boxs" style="padding:30px 0;background-color:rgba(255, 255, 255, .5);">
+                                <div class=" imgs clearfix">
+                                    <div class="images col-lg-4 col-md-4 col-xs-4">
+                                        <img src="https://www.ssbollard.com/Uploads/202003/5e7c6a947bac5.png" alt="" />
+                                    </div>
+                                    <div class="images col-lg-4 col-md-4 col-xs-4">
+                                        <img src="https://www.ssbollard.com/Uploads/202003/5e7c6aa87b8bb.png" alt="" />
+                                    </div>
+                                    <div class="images col-lg-4 col-md-4 col-xs-4">
+                                        <img src="https://www.ssbollard.com/Uploads/202003/5e7c6ab9595df.png" alt="" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -488,7 +564,9 @@
     </div>
 
 
+
 </div>
 </body>
+
 
 </html>
