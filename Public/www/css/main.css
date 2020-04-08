@@ -1214,6 +1214,7 @@ header .navbar .navbar-nav>li>a {
         padding-bottom: 20px;
     }
 
+    .index .choose .box .list .ico:nth-child(5) p,
     .index .choose .box .list .ico:nth-child(6) p,
     .index .choose .box .list .ico:nth-child(7) p,
     .index .choose .box .list .ico:nth-child(8) p {
@@ -1226,7 +1227,7 @@ header .navbar .navbar-nav>li>a {
     }
 
     .index .contact .step2 {
-        padding-top: 30px;
+        padding-top: 20px;
         padding-bottom: 0;
     }
 
@@ -1240,5 +1241,9 @@ header .navbar .navbar-nav>li>a {
 
     .index .pcbox-img {
         display: none;
+    }
+
+    .index .case h3 {
+        padding: 0 30px;
     }
 }
