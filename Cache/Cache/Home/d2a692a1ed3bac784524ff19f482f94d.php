@@ -107,15 +107,16 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <?php  $_result=M("slide_data")->field("*")->where("fid = 1 AND status=1 ")->order("id desc")->limit("5")->select();; if ($_result): $n=0;foreach($_result as $key=>$r):++$n;$mod = ($n % 2 );?><div class="swiper-slide">
-                        <a href="#products" title="<?php echo ($r["title"]); ?>" class="banner-a">
-                            <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>">
-                        </a>
-                    </div><?php endforeach; endif;?>
+                            <a href="#products" title="<?php echo ($r["title"]); ?>" class="banner-a">
+                                <img src="<?php echo ($r["pic"]); ?>" alt="<?php echo ($r["title"]); ?>">
+                            </a>
+                        </div><?php endforeach; endif;?>
                 </div>
                 <div class="container">
                     <div class="row">
-                        <form method="post" action="index.php?g=Home&a=message" onsubmit="return beforeSubmit3(this);">
-            <input name="forward" type="hidden" value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>"/>
+                        <form method="post" action="index.php?g=Home&a=message" onsubmit="return beforeSubmit2(this);">
+                            <input name="forward" type="hidden"
+                                value="<?php echo ($_SERVER['SERVER_NAME']); if($catid) : ?>/index.php?m=<?php echo ($Categorys[$catid]['module']); ?>&a=index&id=<?php echo ($catid); else :?>/index.php<?php endif;?>" />
                             <h6>Contact Us</h6>
                             <div class="list">
                                 <div class="box">
@@ -128,15 +129,15 @@
                                 </div>
                                 <div class="box">
                                     <p>Company Name <span> *</span></p>
-                                    <input type="text" name="company">
+                                    <input type="text" name="com">
                                 </div>
                                 <div class="box">
-                                    <p>Amount </p>
-                                    <input type="text">
+                                    <p>Amount <span> *</span></p>
+                                    <input type="text" name="Amount">
                                 </div>
                                 <div class="box">
-                                    <p>Message </p>
-                                    <textarea></textarea>
+                                    <p>Message <span> *</span></p>
+                                    <textarea name="message"></textarea>
                                 </div>
                             </div>
                             <div style="text-align: center;">
@@ -283,13 +284,13 @@
                                     </div>
                                     <div class="box clearfix">
                                         <div class="box-left col-lg-4 col-md-4">
-                                            <p>Amount </p>
+                                            <p>Amount <span>*</span></p>
                                         </div>
                                         <div class="col-lg-8 col-md-8"> <input type="text" name="Amount"></div>
                                     </div>
                                     <div class="box clearfix">
                                         <div class="box-left col-lg-4 col-md-4">
-                                            <p> Message</p>
+                                            <p> Message <span>*</span></p>
                                         </div>
                                         <div class="col-lg-8 col-md-8"> <textarea name="message"></textarea></div>
                                     </div>
@@ -424,14 +425,14 @@
                                         </div>
                                         <div class="box col-xs-6">
                                             <div class="box-left">
-                                                <p>Amount </p>
+                                                <p>Amount <span>*</span></p>
                                             </div>
                                             <input type="text" name="Amount">
                                         </div>
                                     </div>
                                     <div class="box ">
                                         <div class="box-left">
-                                            <p> Message</p>
+                                            <p> Message <span>*</span></p>
                                         </div>
                                         <textarea name="message"></textarea>
                                     </div>
